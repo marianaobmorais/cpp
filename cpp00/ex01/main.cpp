@@ -6,22 +6,22 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 00:43:56 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/21 12:07:43 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/04/21 19:27:24 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "PhoneBook.hpp"
-//#include "Contact.hpp"
+#include "Contact.hpp"
 
 int	main(void)
 {
-	PhoneBook	phonebook; //intatiate is like declaring in C
+	Contact		contact;
+	PhoneBook	phonebook;
 
-	phonebook.var = 42;
-	std::cout << "phonebook.var: " << phonebook.var << std::endl;
-	
-	phonebook.test();
+	std::cout << "Awesome Phonebook" << std::endl;
+	phonebook.message_prompt();
+
 	
 	return (0);
 }
