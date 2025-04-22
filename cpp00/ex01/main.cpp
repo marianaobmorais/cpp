@@ -6,32 +6,33 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 00:43:56 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/22 12:42:53 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/04/22 16:48:18 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
 #include "PhoneBook.hpp"
-#include "Contact.hpp"
 
 int	main(void)
 {
 	PhoneBook	phonebook;
-	Contact		contact;
-	std::string	input;
+	std::string	input; // = "";
 
-	std::cout << "Awesome Phonebook" << std::endl;
-	while (input.compare("EXIT") != 0)
+	phonebook.init();
+	while (true)
 	{
 		phonebook.message_prompt();
-		std::getline(std::cin, input);
-		if (input.compare("ADD") == 0)
-			phonebook.add();
-		if (input.compare("SEARCH") == 0)
-			phonebook.search();
+		if (std::getline(std::cin, input))
+		{
+			if (!input.compare("EXIT"))
+				break ;
+			if (!input.compare("ADD"))
+				phonebook.add();
+			if (!input.compare("SEARCH"))
+				phonebook.search();
+		}
+		else
+			break ;
 	}
-	
 	return (0);
 }
 
