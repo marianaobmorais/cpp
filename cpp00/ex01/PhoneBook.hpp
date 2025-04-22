@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:59:30 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/22 16:30:35 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/04/22 18:20:27 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 class PhoneBook
 {
 	private:
-		Contact	contact[MAX];
+		Contact	contact[MAX]; //array of contacts
 		int		index;
 		int		count;
 	public:

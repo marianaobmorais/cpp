@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 00:43:56 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/22 16:48:18 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/04/22 18:21:24 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ int	main(void)
 				phonebook.add();
 			if (!input.compare("SEARCH"))
 				phonebook.search();
+			// else //any other input is ignored
+			// 	std::cout << "Invalid input" << std::endl;
 		}
 		else
 			break ;

@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:58:47 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/22 17:20:59 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/04/22 18:47:43 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,15 +47,26 @@ void	PhoneBook::add(void)
 		index++;
 	else
 		index = 0;
-	// std::string	input;
-
-	// std::cout << "First name: " << std::endl;
-	// std::getline(std::cin, input);
 	return ;
 }
 
 void	PhoneBook::search(void)
 {
-	std::cout << "entered SEARCH" << std::endl;
+	int	i;
+
+	std::cout << " ------------------------------------------- " << std::endl;
+	std::cout << "| Index | First name | Last name | Nickname |" << std::endl;
+	std::cout << " -------------------------------------------" << std::endl;
+	i = 0;
+	while (i < this->count)
+	{
+		std::cout << "|" << i + 1 << "|";
+		std::cout << contact[i].get_first_name() << "|";
+		std::cout << contact[i].get_last_name() << "|";
+		std::cout << contact[i].get_nickname() << "|" << std::endl;
+		std::cout << " -------------------------------------------" << std::endl;
+		i++;
+	}
+	
 	return ;
 }
