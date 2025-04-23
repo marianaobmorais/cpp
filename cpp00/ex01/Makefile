@@ -6,7 +6,7 @@
 #    By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/18 19:58:07 by mariaoli          #+#    #+#              #
-#    Updated: 2025/04/21 15:25:08 by mariaoli         ###   ########.fr        #
+#    Updated: 2025/04/23 14:21:34 by mariaoli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,9 @@ NAME = phonebook
 
 SRCS = main.cpp \
 		PhoneBook.cpp \
-		Contact.cpp
+		Contact.cpp \
+		utils.cpp
+
 OBJS = $(SRCS:.cpp=.o)
 
 CC = c++

@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:58:47 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/23 12:59:04 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/04/23 14:28:39 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ void	PhoneBook::index_search(void)
 	}
 	else
 	{
-		std::cout << "Error: this index is not available. Try again" << std::endl;
+		std::cout << "Error: This index is not available. Try again" << std::endl;
 		this->index_search();
 	}
 	return ;
@@ -108,6 +108,7 @@ void	PhoneBook::search(void)
 	{
 		std::cout << "|           CONTACT LIST IS EMPTY           |" << std::endl;
 		std::cout << " ------------------------------------------- " << std::endl;
+		return ;
 	}
 	std::cout << std::right;
 	i = 0;

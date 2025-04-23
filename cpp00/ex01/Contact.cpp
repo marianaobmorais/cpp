@@ -6,12 +6,13 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:58:57 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/23 13:02:05 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/04/23 14:57:35 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Contact.hpp"
+#include "utils.hpp"
 
 Contact::Contact(void)
 {
@@ -50,15 +51,16 @@ int	Contact::get_index(void)
 	std::string			input;
 	std::istringstream	iss; //input string stream
 	int					index;
+	bool				check;
 
 	input = "";
 	while (std::getline(std::cin, input))
 	{
-		//check for isalpha?
+		check = all_digits(input);
 		iss = std::istringstream(input); //safer than atoi
-		if (input.empty() || !(iss >> index))
+		if (input.empty() || !check || !(iss >> index))
 		{
-			std::cout << "Error: Empty fields are not accepted" << std::endl;
+			std::cout << "Error: Only the index numbers are accepted" << std::endl;
 			std::cout << "Enter index to display complete contact info: ";
 			continue ;
 		}
@@ -89,6 +91,12 @@ void	Contact::create(Contact *contact)
 	this->nickname = contact->get_input("Nickname: ");
 	std::cout << "Phone number: ";
 	this->phone_number = contact->get_input("Phone number: ");
+	while (!all_digits(this->phone_number))
+	{
+		std::cout << "Error: Only numbers are accepted" << std::endl;
+		std::cout << "Phone number: ";
+		this->phone_number = contact->get_input("Phone number: ");
+	}
 	std::cout << "Darkest secret: ";
 	this->darkest_secret = contact->get_input("Darkest secret: ");
 	return ;
