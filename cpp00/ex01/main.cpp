@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 00:43:56 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/22 23:00:47 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/04/23 15:02:37 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	main(void)
 {
 	PhoneBook	phonebook;
-	std::string	input; // = ""; should I init this variable?
+	std::string	input;
 
 	phonebook.init();
 	while (true)

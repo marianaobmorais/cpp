@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:58:57 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/23 14:57:35 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/04/23 15:14:00 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,9 @@ std::string	Contact::get_input(std::string str)
 			std::cout << str;
 		}
 		else
-		{
-			if (input.length() > 10)
-				return (input.substr(0, 9) + ".");
 			return (input);
-		}
 	}
-	std::exit(0); //add message?
+	std::exit(0);
 }
 
 int	Contact::get_index(void)
@@ -53,11 +49,10 @@ int	Contact::get_index(void)
 	int					index;
 	bool				check;
 
-	input = "";
 	while (std::getline(std::cin, input))
 	{
 		check = all_digits(input);
-		iss = std::istringstream(input); //safer than atoi
+		iss = std::istringstream(input);
 		if (input.empty() || !check || !(iss >> index))
 		{
 			std::cout << "Error: Only the index numbers are accepted" << std::endl;
@@ -67,7 +62,7 @@ int	Contact::get_index(void)
 		else
 			return (index);	
 	}
-	std::exit(0); //add message?
+	std::exit(0);
 }
 
 void	Contact::init(void)

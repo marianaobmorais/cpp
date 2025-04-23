@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 14:00:54 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/23 14:45:52 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/04/23 15:21:26 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <string>
 #include <cctype>
 
-bool	all_digits(const std::string &str);
+bool		all_digits(const std::string &str);
+std::string	truncate(const std::string &str);
 
 #endif //UTILS_HPP

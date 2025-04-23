@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 14:02:16 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/23 14:57:07 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/04/23 15:21:29 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,11 @@ bool	all_digits(const std::string &str)
 		i++;
 	}
 	return (true);
+}
+
+std::string	truncate(const std::string &str)
+{
+	if (str.length() > 10)
+		return (str.substr(0, 9) + ".");
+	return (str);
 }

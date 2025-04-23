@@ -6,11 +6,12 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:58:47 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/23 14:28:39 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/04/23 15:23:26 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+#include "utils.hpp"
 
 PhoneBook::PhoneBook(void)
 {
@@ -53,6 +54,9 @@ int	PhoneBook::get_count(void)
 
 void	PhoneBook::add(void)
 {
+	std::cout << " ------------------------------------------- " << std::endl;
+	std::cout << "|                    ADD                    |" << std::endl;
+	std::cout << " ------------------------------------------- " << std::endl;
 	if (count == MAX)
 		this->message_warning();
 	contact[index].create(&contact[index]);
@@ -95,9 +99,12 @@ void	PhoneBook::index_search(void)
 
 void	PhoneBook::search(void)
 {
-	int	i;
+	int			i;
+	std::string	tmp;
 
 	std::cout << std::left;
+	std::cout << " ------------------------------------------- " << std::endl;
+	std::cout << "|                   SEARCH                  |" << std::endl;
 	std::cout << " ------------------------------------------- " << std::endl;
 	std::cout << "|" << std::setw(10) << "Index" << "|";
 	std::cout << std::setw(10) << "First name" << "|";
@@ -115,9 +122,9 @@ void	PhoneBook::search(void)
 	while (i < this->count)
 	{
 		std::cout << "|" << std::setw(10) << i + 1 << "|";
-		std::cout << std::setw(10) << contact[i].get_first_name() << "|";
-		std::cout << std::setw(10) << contact[i].get_last_name() << "|";
-		std::cout << std::setw(10) << contact[i].get_nickname() << "|" << std::endl;
+		std::cout << std::setw(10) << truncate(contact[i].get_first_name()) << "|";
+		std::cout << std::setw(10) << truncate(contact[i].get_last_name()) << "|";
+		std::cout << std::setw(10) << truncate(contact[i].get_nickname()) << "|" << std::endl;
 		std::cout << " ------------------------------------------- " << std::endl;
 		i++;
 	}
