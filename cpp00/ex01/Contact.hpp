@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 20:03:05 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/23 12:45:43 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/04/23 16:27:27 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define CONTACT_HPP
 
 #include <string>
+#include <iostream>
 #include <sstream> //istringstream
 #include <stdlib.h> //exit
 

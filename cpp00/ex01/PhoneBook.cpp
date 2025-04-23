@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:58:47 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/23 15:23:26 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/04/23 19:42:27 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	PhoneBook::message_warning(void)
 {
 	std::cout << std::endl;
 	std::cout << "Warning: Phonebook is full!" << std::endl;
-	std::cout << "The new contact will replace the oldest one" << std::endl;
+	std::cout << "A new contact will replace the oldest one" << std::endl;
 	std::cout << std::endl;
 }
 
@@ -62,7 +62,7 @@ void	PhoneBook::add(void)
 	contact[index].create(&contact[index]);
 	if (count < MAX)
 		count++;
-	if (index + 1 < MAX) //always replace the oldest modified index
+	if (index + 1 < MAX)
 		index++;
 	else
 		index = 0;
@@ -128,6 +128,8 @@ void	PhoneBook::search(void)
 		std::cout << " ------------------------------------------- " << std::endl;
 		i++;
 	}
+	if (this->get_count() == MAX)
+		this->message_warning();
 	this->index_search();
 	return ;
 }

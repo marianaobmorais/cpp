@@ -6,11 +6,10 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:58:57 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/23 15:14:00 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/04/23 19:43:05 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "Contact.hpp"
 #include "utils.hpp"
 
@@ -45,14 +44,13 @@ std::string	Contact::get_input(std::string str)
 int	Contact::get_index(void)
 {
 	std::string			input;
-	std::istringstream	iss; //input string stream
 	int					index;
 	bool				check;
 
 	while (std::getline(std::cin, input))
 	{
 		check = all_digits(input);
-		iss = std::istringstream(input);
+		std::istringstream	iss(input);
 		if (input.empty() || !check || !(iss >> index))
 		{
 			std::cout << "Error: Only the index numbers are accepted" << std::endl;

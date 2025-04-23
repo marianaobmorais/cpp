@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 00:43:56 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/23 15:02:37 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/04/23 16:43:48 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ int	main(void)
 				phonebook.add();
 			if (!input.compare("SEARCH"))
 				phonebook.search();
-			if (phonebook.get_count() == MAX)
-				phonebook.message_warning();
+			// if (phonebook.get_count() == MAX)
+			// 	phonebook.message_warning();
 		}
 		else
 			break ;
