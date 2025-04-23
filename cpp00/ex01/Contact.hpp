@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 20:03:05 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/22 18:40:35 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/04/23 12:45:43 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 # define CONTACT_HPP
 
 #include <string>
+#include <sstream> //istringstream
 #include <stdlib.h> //exit
+
 class Contact
 {
 	private:
@@ -28,7 +30,8 @@ class Contact
 		~Contact(void);
 		void		init(void);
 		void		create(Contact *contact);
-		std::string	get_input(void);
+		int			get_index(void);
+		std::string	get_input(std::string str);
 		std::string	get_first_name(void);
 		std::string	get_last_name(void);
 		std::string	get_nickname(void);

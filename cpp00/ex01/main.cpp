@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 00:43:56 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/22 18:21:24 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/04/22 23:00:47 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	main(void)
 {
 	PhoneBook	phonebook;
-	std::string	input; // = "";
+	std::string	input; // = ""; should I init this variable?
 
 	phonebook.init();
 	while (true)
@@ -29,28 +29,11 @@ int	main(void)
 				phonebook.add();
 			if (!input.compare("SEARCH"))
 				phonebook.search();
-			// else //any other input is ignored
-			// 	std::cout << "Invalid input" << std::endl;
+			if (phonebook.get_count() == MAX)
+				phonebook.message_warning();
 		}
 		else
 			break ;
 	}
 	return (0);
 }
-
-
-// int	main(void)
-// {
-// 	char	buff[1024]; //check limit?
-
-// 	std::cout << "Welcome to My Awesome Phonebook!" << std::endl;
-// 	std::cout << "Please enter one of the three commands:" << std::endl;
-// 	std::cout << "<ADD> <SEARCH> <EXIT>: " << std::endl;
-// 	std::cin >> buff;
-// 	//while (buff.compare("EXIT") != 0)
-// 	// {
-// 	// 	std::cin >> buff;
-// 	// }
-// 	std::cout << "You entered: [" << buff << "]" << std::endl;
-// 	return (0);
-// }

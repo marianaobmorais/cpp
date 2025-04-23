@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:58:57 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/22 18:40:30 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/04/23 13:02:05 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,49 @@ Contact::~Contact(void)
 	return ;
 }
 
-std::string	Contact::get_input(void)
+std::string	Contact::get_input(std::string str)
 {
-	std::string	input; //= "";
+	std::string	input;
 
-	if (std::getline(std::cin, input))
-		return (input);
-	else
-		std::exit(0); //add message?
+	input = "";
+	while (std::getline(std::cin, input))
+	{
+		if (input.empty())
+		{
+			std::cout << "Error: Empty fields are not accepted" << std::endl;
+			std::cout << str;
+		}
+		else
+		{
+			if (input.length() > 10)
+				return (input.substr(0, 9) + ".");
+			return (input);
+		}
+	}
+	std::exit(0); //add message?
+}
+
+int	Contact::get_index(void)
+{
+	std::string			input;
+	std::istringstream	iss; //input string stream
+	int					index;
+
+	input = "";
+	while (std::getline(std::cin, input))
+	{
+		//check for isalpha?
+		iss = std::istringstream(input); //safer than atoi
+		if (input.empty() || !(iss >> index))
+		{
+			std::cout << "Error: Empty fields are not accepted" << std::endl;
+			std::cout << "Enter index to display complete contact info: ";
+			continue ;
+		}
+		else
+			return (index);	
+	}
+	std::exit(0); //add message?
 }
 
 void	Contact::init(void)
@@ -47,15 +82,15 @@ void	Contact::create(Contact *contact)
 {
 	this->init();
 	std::cout << "First name: ";
-	this->first_name = contact->get_input();
+	this->first_name = contact->get_input("First name: ");
 	std::cout << "Last name: ";
-	this->last_name = contact->get_input();
+	this->last_name = contact->get_input("Last name: ");
 	std::cout << "Nickname: ";
-	this->nickname = contact->get_input();
+	this->nickname = contact->get_input("Nickname: ");
 	std::cout << "Phone number: ";
-	this->nickname = contact->get_input();
+	this->phone_number = contact->get_input("Phone number: ");
 	std::cout << "Darkest secret: ";
-	this->nickname = contact->get_input();
+	this->darkest_secret = contact->get_input("Darkest secret: ");
 	return ;
 }
 
