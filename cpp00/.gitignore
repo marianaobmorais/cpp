@@ -2,3 +2,4 @@ megaphone
 phonebook
 *.o
 a.out
+#*.log
