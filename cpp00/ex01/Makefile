@@ -6,7 +6,7 @@
 #    By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/18 19:58:07 by mariaoli          #+#    #+#              #
-#    Updated: 2025/04/23 14:21:34 by mariaoli         ###   ########.fr        #
+#    Updated: 2025/04/24 16:51:44 by mariaoli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,18 +19,18 @@ SRCS = main.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
 
-CC = c++
+CCPP = c++
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
 
 RM = rm -f
 
 $(NAME): $(OBJS)
-	$(CC) $(CPPFLAGS) $(OBJS) -o $(NAME)
+	$(CCPP) $(CPPFLAGS) $(OBJS) -o $(NAME)
 
 all: $(NAME)
 
 %.o: %.cpp
-	$(CC) $(CPPFLAGS) -c $< -o $@
+	$(CCPP) $(CPPFLAGS) -c $< -o $@
 
 clean:
 	$(RM) $(OBJS)
