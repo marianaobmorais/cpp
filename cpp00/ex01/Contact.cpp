@@ -6,22 +6,16 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:58:57 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/29 16:08:55 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/04/29 21:27:55 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 #include "utils.hpp"
 
-Contact::Contact(void)
-{
-	return ;
-}
+Contact::Contact(void){}
 
-Contact::~Contact(void)
-{
-	return ;
-}
+Contact::~Contact(void){}
 
 std::string	Contact::get_input(std::string str)
 {
@@ -80,7 +74,6 @@ void	Contact::create(Contact *contact)
 	}
 	std::cout << "Darkest secret: ";
 	this->darkest_secret = contact->get_input("Darkest secret: ");
-	return ;
 }
 
 std::string	Contact::get_first_name()

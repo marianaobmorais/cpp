@@ -6,22 +6,16 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:58:47 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/23 19:42:27 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/04/29 21:28:30 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 #include "utils.hpp"
 
-PhoneBook::PhoneBook(void)
-{
-	return ;
-}
+PhoneBook::PhoneBook(void){}
 
-PhoneBook::~PhoneBook(void)
-{
-	return ;
-}
+PhoneBook::~PhoneBook(void){}
 
 void	PhoneBook::init(void)
 {
@@ -36,7 +30,6 @@ void	PhoneBook::init(void)
 void	PhoneBook::message_prompt(void)
 {
 	std::cout << "Please enter <ADD>, <SEARCH> or <EXIT>: ";
-	return ;
 }
 
 void	PhoneBook::message_warning(void)
@@ -94,7 +87,6 @@ void	PhoneBook::index_search(void)
 		std::cout << "Error: This index is not available. Try again" << std::endl;
 		this->index_search();
 	}
-	return ;
 }
 
 void	PhoneBook::search(void)
@@ -131,5 +123,4 @@ void	PhoneBook::search(void)
 	if (this->get_count() == MAX)
 		this->message_warning();
 	this->index_search();
-	return ;
 }
