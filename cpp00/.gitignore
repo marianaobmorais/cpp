@@ -1,5 +1,6 @@
 megaphone
 phonebook
+program
 *.o
 a.out
 #*.log
