@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:58:57 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/23 19:43:05 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/04/29 16:08:55 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ std::string	Contact::get_input(std::string str)
 {
 	std::string	input;
 
-	input = "";
 	while (std::getline(std::cin, input))
 	{
 		if (input.empty())
@@ -63,19 +62,8 @@ int	Contact::get_index(void)
 	std::exit(0);
 }
 
-void	Contact::init(void)
-{
-	this->first_name = "";
-	this->last_name = "";
-	this->nickname = "";
-	this->phone_number = "";
-	this->darkest_secret = "";
-	return ;
-}
-
 void	Contact::create(Contact *contact)
 {
-	this->init();
 	std::cout << "First name: ";
 	this->first_name = contact->get_input("First name: ");
 	std::cout << "Last name: ";

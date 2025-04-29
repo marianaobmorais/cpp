@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 20:03:05 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/23 16:27:27 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/04/29 16:08:59 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ class Contact
 	public:
 		Contact(void);
 		~Contact(void);
-		void		init(void);
 		void		create(Contact *contact);
 		int			get_index(void);
 		std::string	get_input(std::string str);
