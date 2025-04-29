@@ -10,6 +10,8 @@
 
 //displayAccountsInfos
 [19920104_091532] accounts:8;total:20049;deposits:0;withdrawals:0
+
+//displayStatus
 [19920104_091532] index:0;amount:42;deposits:0;withdrawals:0
 [19920104_091532] index:1;amount:54;deposits:0;withdrawals:0
 [19920104_091532] index:2;amount:957;deposits:0;withdrawals:0
@@ -31,6 +33,8 @@
 
 //displayAccountsInfos
 [19920104_091532] accounts:8;total:21524;deposits:8;withdrawals:0
+
+//displayStatus
 [19920104_091532] index:0;amount:47;deposits:1;withdrawals:0
 [19920104_091532] index:1;amount:819;deposits:1;withdrawals:0
 [19920104_091532] index:2;amount:1521;deposits:1;withdrawals:0
@@ -52,6 +56,8 @@
 
 //displayAccountsInfos
 [19920104_091532] accounts:8;total:12442;deposits:8;withdrawals:6
+
+//displayStatus
 [19920104_091532] index:0;amount:47;deposits:1;withdrawals:0
 [19920104_091532] index:1;amount:785;deposits:1;withdrawals:1
 [19920104_091532] index:2;amount:864;deposits:1;withdrawals:1
