@@ -6,7 +6,7 @@
 #    By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/24 16:24:01 by mariaoli          #+#    #+#              #
-#    Updated: 2025/04/24 16:58:09 by mariaoli         ###   ########.fr        #
+#    Updated: 2025/04/29 15:31:53 by mariaoli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRCS = tests.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
 
-CCPP = c++;
+CCPP = c++
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
 
 RM = rm -f
