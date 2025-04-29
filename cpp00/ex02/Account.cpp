@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 16:24:21 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/29 21:50:58 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/04/29 21:54:44 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,7 @@ void	Account::displayStatus(void) const
 	std::cout << "index:" << _accountIndex << ";";
 	std::cout << "amount:" << checkAmount() << ";";
 	std::cout << "deposits:" << _nbDeposits << ";";
-	std::cout << "withdrawals:"<< _nbWithdrawals << ";" << std::endl;
+	std::cout << "withdrawals:"<< _nbWithdrawals << std::endl;
 	return ;
 }
 
