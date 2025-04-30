@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:59:30 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/23 19:47:39 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/04/30 17:49:42 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 
 #define MAX 8
 
+/// @brief Represents a phonebook that stores a collection of contacts.
 class PhoneBook
 {
 	private:

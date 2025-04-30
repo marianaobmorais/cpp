@@ -6,17 +6,20 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:58:47 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/29 21:28:30 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/04/30 17:44:02 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 #include "utils.hpp"
 
+/// @brief Default constructor for the PhoneBook class.
 PhoneBook::PhoneBook(void){}
 
+/// @brief Destructor for the PhoneBook class.
 PhoneBook::~PhoneBook(void){}
 
+/// @brief Initializes the phonebook display and sets initial values.
 void	PhoneBook::init(void)
 {
 	std::cout << " ------------------------------------------- " << std::endl;
@@ -27,11 +30,13 @@ void	PhoneBook::init(void)
 	return ;
 }
 
+/// @brief Displays the prompt for user input.
 void	PhoneBook::message_prompt(void)
 {
 	std::cout << "Please enter <ADD>, <SEARCH> or <EXIT>: ";
 }
 
+/// @brief Displays a warning when the phonebook is full.
 void	PhoneBook::message_warning(void)
 {
 	std::cout << std::endl;
@@ -40,11 +45,14 @@ void	PhoneBook::message_warning(void)
 	std::cout << std::endl;
 }
 
+/// @brief Returns the number of contacts in the phonebook.
 int	PhoneBook::get_count(void)
 {
 	return (this->count);
 }
 
+/// @brief Adds a new contact to the phonebook.
+/// @note Prompts the user for contact details. If the phonebook is full, it replaces the oldest contact.
 void	PhoneBook::add(void)
 {
 	std::cout << " ------------------------------------------- " << std::endl;
@@ -62,6 +70,9 @@ void	PhoneBook::add(void)
 	return ;
 }
 
+/// @brief Allows the user to search for a contact by index and displays the contact's information.
+/// @note Prompts the user to enter the index of the contact they want to view. If the index is valid, 
+/// displays the contact's details; otherwise, an error message is shown, and the user is prompted again.
 void	PhoneBook::index_search(void)
 {
 	int	index;
@@ -89,6 +100,9 @@ void	PhoneBook::index_search(void)
 	}
 }
 
+/// @brief Displays all contacts in the phonebook and prompts the user for a contact index to view.
+/// @note If no contacts are available, shows a message indicating the phonebook is empty.
+/// After displaying the list, the user can select an index to view the contact details.
 void	PhoneBook::search(void)
 {
 	int			i;

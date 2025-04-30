@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 20:03:05 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/29 16:08:59 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/04/30 17:46:43 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <sstream> //istringstream
 #include <stdlib.h> //exit
 
+/// @brief Represents a single contact in the phonebook.
 class Contact
 {
 	private:
