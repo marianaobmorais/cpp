@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:58:47 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/30 17:44:02 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/05/05 17:34:36 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	PhoneBook::message_warning(void)
 }
 
 /// @brief Returns the number of contacts in the phonebook.
-int	PhoneBook::get_count(void)
+int	PhoneBook::get_count(void) const
 {
 	return (this->count);
 }

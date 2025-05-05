@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:58:57 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/30 17:36:31 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/05/05 17:34:16 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,35 +89,35 @@ void	Contact::create(Contact *contact)
 
 /// @brief Returns the first name of the contact.
 /// @return First name as a string.
-std::string	Contact::get_first_name()
+std::string	Contact::get_first_name() const
 {
 	return (this->first_name);
 }
 
 /// @brief Returns the last name of the contact.
 /// @return Last name as a string.
-std::string	Contact::get_last_name()
+std::string	Contact::get_last_name() const
 {
 	return (this->last_name);
 }
 
 /// @brief Returns the nickname of the contact.
 /// @return Nickname as a string.
-std::string Contact::get_nickname()
+std::string Contact::get_nickname() const
 {
 	return (this->nickname);
 }
 
 /// @brief Returns the phone number of the contact.
 /// @return Phone number as a string.
-std::string	Contact::get_phone_number()
+std::string	Contact::get_phone_number() const
 {
 	return (this->phone_number);
 }
 
 /// @brief Returns the darkest secret of the contact.
 /// @return Darkest secret as a string.
-std::string Contact::get_darkest_secret()
+std::string Contact::get_darkest_secret() const
 {
 	return (this->darkest_secret);
 }

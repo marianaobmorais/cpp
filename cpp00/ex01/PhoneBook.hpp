@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:59:30 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/04/30 17:49:42 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/05/05 17:34:39 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class PhoneBook
 		void	init(void);
 		void	message_prompt(void);
 		void	message_warning(void);
-		int		get_count(void);
+		int		get_count(void) const;
 		void	add(void);
 		void	search(void);
 		void	index_search(void);
