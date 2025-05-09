@@ -6,11 +6,13 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 14:18:17 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/05/08 14:22:17 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/05/09 01:42:27 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
 int	main(void) 
 {
