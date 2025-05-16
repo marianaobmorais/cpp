@@ -6,13 +6,14 @@
 #    By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/09 01:58:18 by mariaoli          #+#    #+#              #
-#    Updated: 2025/05/09 02:04:53 by mariaoli         ###   ########.fr        #
+#    Updated: 2025/05/17 00:08:59 by mariaoli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = program
 
 SRCS = main.cpp \
+		utils.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
