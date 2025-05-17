@@ -6,7 +6,7 @@
 #    By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/17 00:13:42 by mariaoli          #+#    #+#              #
-#    Updated: 2025/05/17 01:14:33 by mariaoli         ###   ########.fr        #
+#    Updated: 2025/05/17 02:20:50 by mariaoli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,6 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 
-re: fclean re
+re: fclean all
 
 .PHONY: all clean fclean re
