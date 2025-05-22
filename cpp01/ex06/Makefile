@@ -6,11 +6,11 @@
 #    By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/22 15:17:46 by mariaoli          #+#    #+#              #
-#    Updated: 2025/05/22 15:22:51 by mariaoli         ###   ########.fr        #
+#    Updated: 2025/05/22 15:37:31 by mariaoli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = harl_filter
+NAME = harlFilter
 
 SRCS = main.cpp \
 		Harl.cpp
