@@ -4,5 +4,7 @@ hi_brain
 unnecessary_violence
 program
 harl
+harl_filter
 *.o
 a.out
+*.replace
