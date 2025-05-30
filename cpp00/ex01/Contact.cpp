@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:58:57 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/05/05 17:34:16 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/05/29 19:26:29 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,10 @@ std::string	Contact::get_input(std::string str)
 			std::cout << str;
 		}
 		else
+		{
+			handle_whitespaces(input);
 			return (input);
+		}
 	}
 	std::exit(0);
 }
