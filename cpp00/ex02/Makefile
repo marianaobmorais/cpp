@@ -6,7 +6,7 @@
 #    By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/24 16:24:01 by mariaoli          #+#    #+#              #
-#    Updated: 2025/05/05 14:10:19 by mariaoli         ###   ########.fr        #
+#    Updated: 2025/05/29 19:18:04 by mariaoli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,13 +28,13 @@ $(NAME): $(OBJS)
 all: $(NAME)
 
 %.o: %.cpp
-	$(CXX) $(CXXPFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	$(RM) $(OBJS)
 
 fclean: clean
-	$(RM) $(OBJS)
+	$(RM) $(NAME)
 
 re: fclean all
 
