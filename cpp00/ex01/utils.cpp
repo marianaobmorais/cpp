@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 14:02:16 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/05/30 18:29:10 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/05/31 15:29:55 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,10 +57,10 @@ void	handle_whitespaces(std::string& input)
 		i++;
 	}
 	input = cleaned_input.str();
-	if (input.front() == ' ')
-		input.erase(input.begin());
-	if (input.back() == ' ')
-		input.pop_back();
+	if (input[0] == ' ')
+		input.erase(0, 1);
+	if (input[input.length() - 1] == ' ')
+		input.erase(input.length() - 1, 1);
 }
 
 
