@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 16:24:21 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/05/26 17:11:12 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/01 00:50:27 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,6 +120,7 @@ bool	Account::makeWithdrawal(int withdrawal)
 	}
 	std::cout << withdrawal << ";";
 	_amount -= withdrawal;
+	_totalAmount -= withdrawal;
 	_nbWithdrawals++;
 	_totalNbWithdrawals++;
 	std::cout << "amount:" << checkAmount() << ";";
