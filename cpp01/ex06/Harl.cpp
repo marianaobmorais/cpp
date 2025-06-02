@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 15:45:46 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/05/26 18:17:02 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/02 18:17:20 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,10 @@ void	Harl::complain(std::string level)
 	{
 		case 0:
 			this->debug();
-			break ;
 		case 1:
 			this->info();
-			break ;
 		case 2:
 			this->warning();
-			break ;
 		case 3:
 			this->error();
 			break ;
