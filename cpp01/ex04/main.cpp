@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/09 02:06:18 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/05/17 00:05:48 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/02 18:16:13 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int	main(int argc, char **argv)
 	if (s1.empty())
 	{
 		std::cout << "Error: string_1 cannot be empty" << std::endl; //cerr?
+		return (1);
 	}
 	std::ifstream	infile(filename.c_str());
 	if (!checkFileStream(infile))
