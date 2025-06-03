@@ -8,7 +8,16 @@
 
 ## About
 
-SOON
+The objective of these modules is to give an introduction to Object-Oriented Programming:
+
+[C++00](https://github.com/marianaobmorais/cpp/tree/main/cpp00): Namespaces, classes, member functions, stdio streams, initialization lists, static and const keywords.  
+[C++01](https://github.com/marianaobmorais/cpp/tree/main/cpp01): Memory allocation, pointers to members, references and switch statements.  
+[C++02](https://github.com/marianaobmorais/cpp/tree/main/cpp02/): Ad-hoc polymorphism, operator overloading and the Orthodox Canonical class form.  
+C++03: Inheritance.  
+C++04: Subtype Polymorphism, Abstract Classes, and Interfaces.  
+
+
+As required per the 42 school's syllabus, the modules follow the C++98 standard.
 
 ## Build
 
