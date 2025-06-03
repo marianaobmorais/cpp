@@ -6,14 +6,15 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 15:41:24 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/05/26 17:22:25 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/03 19:50:38 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
 /// @brief Constructs a HumanB with a name and no weapon.
-HumanB::HumanB(std::string newName) : name(newName), weapon(NULL) {}
+HumanB::HumanB(std::string newName) :
+	name(newName), weapon(NULL) {}
 
 /// @brief Destructor for HumanB.
 HumanB::~HumanB(void) {}
