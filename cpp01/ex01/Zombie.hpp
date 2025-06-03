@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 17:19:49 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/05/06 19:34:53 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/03 19:49:42 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,7 @@ class Zombie
 		void		announce(void);
 		void		setName(std::string newName);
 };
+
+Zombie*	zombieHorde(int N, std::string name);
 
 #endif //ZOMBIE_HPP

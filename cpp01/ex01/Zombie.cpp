@@ -6,11 +6,11 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 17:28:53 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/05/26 17:16:10 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/03 19:49:58 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.h"
+#include "Zombie.hpp"
 
 /// @brief Default constructor for Zombie.
 Zombie::Zombie(void){}

@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 19:36:45 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/05/05 22:06:39 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/03 19:49:20 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,8 @@ class Zombie
 		~Zombie(void);
 		void	annouce(void);
 };
+
+Zombie*	newZombie(std::string name);
+void	randomChump(std::string name);
 
 #endif //ZOMBIE_HPP;
