@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/09 02:06:18 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/02 18:16:13 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/09 16:38:25 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	main(int argc, char **argv)
 {
 	if (argc != 4)
 	{
-		std::cerr << "USAGE: ./program <filename> <string_1> <string_2>" << std::endl;
+		std::cout << "USAGE: ./program <filename> <string_1> <string_2>" << std::endl;
 		return (1);
 	}
 	std::string filename(argv[1]);
@@ -24,7 +24,7 @@ int	main(int argc, char **argv)
 	std::string s2(argv[3]);
 	if (s1.empty())
 	{
-		std::cout << "Error: string_1 cannot be empty" << std::endl; //cerr?
+		std::cout << "Error: string_1 cannot be empty" << std::endl;
 		return (1);
 	}
 	std::ifstream	infile(filename.c_str());
