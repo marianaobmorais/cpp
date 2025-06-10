@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 00:51:29 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/10 17:28:14 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/10 21:01:49 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,15 @@ class Fixed
 {
 	private:
 		int					_fixedPointValue;
-		static const int	_fractionalBits = 8;
+		static int const	_fractionalBits = 8;
 	public:
 		Fixed(void);							//canonical form //default constructor
 		Fixed(Fixed const& src);				//canonical form //copy constructor //creates new instance
 		Fixed&	operator=(Fixed const& rhs);	//canonical form //copy assignment operator //updates the current instance
 		~Fixed(void);							//canonical form //destructor
 		
-		Fixed(const int n);
-		Fixed(const float f);
+		Fixed(int const n);
+		Fixed(float const f);
 		
 		int		getRawBits(void) const;
 		void	setRawBits(int const raw);
