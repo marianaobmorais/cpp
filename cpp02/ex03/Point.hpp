@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 17:29:46 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/11 18:48:33 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/15 18:55:58 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 class Point
 {
 	private:
-		Fixed	_x;
-		Fixed	_y;
+		Fixed const	x;
+		Fixed const	y;
 	public:
 		Point(void);
 		Point(float const x, float const y);
