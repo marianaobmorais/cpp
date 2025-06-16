@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 17:57:08 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/15 18:58:23 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/16 03:33:40 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,17 @@ Fixed	area(Point const& a, Point const& b, Point const& c)
 /// @return true if the point lies strictly inside the triangle (not on the edge).
 bool	bsp(Point const a, Point const b, Point const c, Point const point)
 {
-	Fixed	totalArea = area(a, b, c);
-	Fixed	areaPBC = area(point, b, c);
-	Fixed	areaAPC = area(a, point, c);
-	Fixed	areaABP = area(a, b, point);
-	Fixed	sum = areaPBC + areaAPC + areaABP;
+	Fixed		totalArea = area(a, b, c);
+	Fixed		areaPBC = area(point, b, c);
+	Fixed		areaAPC = area(a, point, c);
+	Fixed		areaABP = area(a, b, point);
+	Fixed		sum = areaPBC + areaAPC + areaABP;
+	Fixed		diff = totalArea - sum;
+	Fixed const	epsilon(0.004f);
 
-	if (areaPBC != Fixed(0) && areaAPC != Fixed(0) && areaABP != Fixed(0) && totalArea == sum)
+	if (diff < Fixed(0))
+		diff = diff * Fixed(-1);
+	if (areaPBC > Fixed(0) && areaAPC > Fixed(0) && areaABP > Fixed(0) && diff < epsilon)
 		return (true);
 	return (false);
 }
