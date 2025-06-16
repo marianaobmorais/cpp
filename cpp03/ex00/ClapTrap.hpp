@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 09:56:38 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/16 10:06:13 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/16 10:50:16 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,20 @@ class ClapTrap
 		unsigned int	attackDamage;
 	public:
 		ClapTrap(void);
+		ClapTrap(std::string newName);
 		ClapTrap(const ClapTrap& src);
 		ClapTrap&	operator=(const ClapTrap& rhs);
 		~ClapTrap(void);
 
-		void		attack(const std::string& target);
-		void		takeDamage(unsigned int amount);
-		void		beRepaired(unsigned int amount);
+		void			attack(const std::string& target);
+		void			takeDamage(unsigned int amount);
+		void			beRepaired(unsigned int amount);
+
+		std::string		getName(void) const;
+		unsigned int	getHitPoints(void) const;
+		unsigned int	getEnergyPoints(void) const;
+		unsigned int	getAttackDamage(void) const;
+		void			setAttackDamage(unsigned int damage);
 };
 
 #endif //CLAPTRAP_HPP
