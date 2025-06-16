@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 15:39:08 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/10 23:00:44 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/16 17:06:06 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ Fixed::~Fixed(void)
 
 /// @brief Constructs a Fixed object from an integer.
 /// @param n The integer value to convert.
-Fixed::Fixed(const int n)
+Fixed::Fixed(int const n)
 {
 	//std::cout << "Int constructor called" << std::endl;
 	_fixedPointValue = n << _fractionalBits;
@@ -56,7 +56,7 @@ Fixed::Fixed(const int n)
 
 /// @brief Constructs a Fixed object from a float.
 /// @param f The float value to convert.
-Fixed::Fixed(const float f)
+Fixed::Fixed(float const f)
 {
 	//std::cout << "Float constructor called" << std::endl;
 	_fixedPointValue = round(f * (1 << _fractionalBits));
