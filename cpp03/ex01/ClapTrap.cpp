@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 10:07:23 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/18 12:16:24 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/18 19:33:00 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void	ClapTrap::attack(std::string const& target)
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {
-	std::cout << "ClapTrap " << this->name << " took " << amount << " points of damage!" << std::endl;
+	std::cout << /* "ClapTrap " << */ this->name << " took " << amount << " damage points!" << std::endl;
 	if (this->hitPoints >= amount)
 		this->hitPoints -= amount;
 	else
@@ -80,14 +80,14 @@ void	ClapTrap::takeDamage(unsigned int amount)
 void	ClapTrap::beRepaired(unsigned int amount)
 {
 	if (this->energyPoints <= 0 && this->hitPoints <= 0)
-		std::cout << "ClapTrap " << this->name << " cannot attack. Not enough energy points nor hit points." << std::endl;
+		std::cout << /* "ClapTrap " << */ this->name << " cannot attack. Not enough energy points nor hit points." << std::endl;
 	else if (this->energyPoints <= 0)
-		std::cout << "ClapTrap " << this->name << " cannot repair itself. Not enough energy points." << std::endl;
+		std::cout << /* "ClapTrap " << */ this->name << " cannot repair itself. Not enough energy points." << std::endl;
 	else if (this->hitPoints <= 0)
-		std::cout << "ClapTrap " << this->name << " cannot repair itself. Not enough hit points." << std::endl;
+		std::cout << /* "ClapTrap " << */ this->name << " cannot repair itself. Not enough hit points." << std::endl;
 	else
 	{
-		std::cout << "ClapTrap " << this->name << " repairs itself with " << amount << " points of hit!" << std::endl;
+		std::cout << /* "ClapTrap " << */ this->name << " repairs itself with " << amount << " hit points!" << std::endl;
 		this->energyPoints--;
 		this->hitPoints += amount;
 	}
