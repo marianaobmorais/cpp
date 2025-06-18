@@ -6,14 +6,14 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 10:07:23 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/17 10:02:08 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/18 11:33:59 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(void) :
-	name("Default Name"),
+	name("Default ClapTrap"),
 	hitPoints(10),
 	energyPoints(10),
 	attackDamage(0)
