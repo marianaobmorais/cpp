@@ -6,14 +6,15 @@
 #    By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/16 09:47:53 by mariaoli          #+#    #+#              #
-#    Updated: 2025/06/16 09:55:07 by mariaoli         ###   ########.fr        #
+#    Updated: 2025/06/18 12:53:53 by mariaoli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = claptrap
+NAME = scavtrap
 
 SRCS = main.cpp \
-		ClapTrap.cpp
+		ClapTrap.cpp \
+		ScavTrap.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
