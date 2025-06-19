@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/17 19:18:50 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/19 12:56:25 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/19 19:55:45 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,10 @@ class ScavTrap : virtual public ClapTrap
 		
 		void	attack(std::string const& target);
 		void	guardGate(void);
+
+		static unsigned int const	defaultHitPoints;
+		static unsigned int const	defaultEnergyPoints;
+		static unsigned int const	defaultAttackDamage;
 };
 
 #endif

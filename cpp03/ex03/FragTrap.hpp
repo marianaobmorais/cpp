@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/17 19:18:50 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/19 12:56:58 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/19 19:54:51 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,10 @@ class FragTrap : virtual public ClapTrap
 		~FragTrap(void);
 
 		void	highFivesGuys(void);
+
+		static unsigned int const	defaultHitPoints;
+		static unsigned int const	defaultEnergyPoints;
+		static unsigned int const	defaultAttackDamage;
 };
 
 #endif //FRAGTRAP_HPP
