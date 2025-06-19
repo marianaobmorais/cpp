@@ -6,11 +6,11 @@
 #    By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/16 09:47:53 by mariaoli          #+#    #+#              #
-#    Updated: 2025/06/19 12:05:19 by mariaoli         ###   ########.fr        #
+#    Updated: 2025/06/19 15:55:37 by mariaoli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = fragtrap
+NAME = diamondtrap
 
 SRCS = main.cpp \
 		ClapTrap.cpp \
