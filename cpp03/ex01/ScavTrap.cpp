@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/17 19:36:17 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/19 10:38:37 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/19 11:19:26 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,9 @@ ScavTrap::ScavTrap(std::string const& newName) : ClapTrap(newName)
 
 /// @brief Copy constructor for ScavTrap.
 /// @param src The ScavTrap to copy from.
-ScavTrap::ScavTrap(ScavTrap const& src)
+ScavTrap::ScavTrap(ScavTrap const& src) : ClapTrap(src)
 {
 	std::cout << "ScavTrap copy constructor called" << std::endl;
-	*this = src;
 }
 
 /// @brief Copy assignment operator.
