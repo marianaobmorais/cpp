@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/19 09:31:10 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/19 12:01:12 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/19 13:33:25 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ FragTrap::FragTrap(std::string const& newName) : ClapTrap(newName)
 FragTrap::FragTrap(FragTrap const& src) : ClapTrap(src)
 {
 	std::cout << "FragTrap copy constructor called" << std::endl;
-	//*this = src;
 }
 
 FragTrap&	FragTrap::operator=(FragTrap const& rhs)
