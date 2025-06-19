@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 10:07:23 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/18 20:01:39 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/19 09:44:39 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,3 @@ unsigned int	ClapTrap::getEnergyPoints(void) const
 	return (this->energyPoints);
 }
 
-unsigned int	ClapTrap::getAttackDamage(void) const
-{
-	return (this->attackDamage);
-}

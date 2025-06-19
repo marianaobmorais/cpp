@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 09:56:38 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/18 12:16:32 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/19 09:38:04 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ class ClapTrap
 		std::string		getName(void) const;
 		unsigned int	getHitPoints(void) const;
 		unsigned int	getEnergyPoints(void) const;
-		unsigned int	getAttackDamage(void) const;
 };
 
 #endif //CLAPTRAP_HPP
