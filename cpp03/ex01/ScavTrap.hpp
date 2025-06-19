@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/17 19:18:50 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/18 12:10:53 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/19 09:29:20 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ class ScavTrap : public ClapTrap
 		ScavTrap(ScavTrap const& src);
 		ScavTrap&	operator=(ScavTrap const& rhs);
 		~ScavTrap(void);
-		
+
 		void	attack(std::string const& target);
 		void	guardGate(void);
 };
 
-#endif
+#endif //SCAVTRAP_CPP
