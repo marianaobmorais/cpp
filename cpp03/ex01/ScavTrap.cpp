@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/17 19:36:17 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/19 10:26:38 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/19 10:38:37 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 /// @brief Default constructor for ScavTrap.
 /// Initializes a ScavTrap with default name and predefined hit/energy/attack values.
-ScavTrap::ScavTrap(void) : ClapTrap()
+ScavTrap::ScavTrap(void) : ClapTrap("Default ScavTrap")
 {
-	this->name = "Default ScavTrap";
 	this->hitPoints = 100;
 	this->energyPoints = 50;
 	this->attackDamage = 20;
