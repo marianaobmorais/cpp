@@ -6,36 +6,39 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/19 12:58:10 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/19 13:54:42 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/19 20:10:16 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
+/// @brief Default constructor for DiamondTrap.
+/// Initializes with default names and values from FragTrap and ScavTrap.
 DiamondTrap::DiamondTrap(void) :
 	ClapTrap("Default_clap_name"),
-	FragTrap(), //why not use parameter?
-	ScavTrap(), //why not use parameter?
-	name("default")
+	name("Default")
 {
-	this->hitPoints = FragTrap::hitPoints;
-	this->energyPoints = ScavTrap::energyPoints;
-	this->attackDamage = FragTrap::attackDamage;
+	this->hitPoints = FragTrap::defaultHitPoints;
+	this->energyPoints = ScavTrap::defaultEnergyPoints;
+	this->attackDamage = FragTrap::defaultAttackDamage;
 	std::cout << "DiamondTrap default constructor called for " << this->name << std::endl;
 }
 
+
+/// @brief Parameterized constructor for DiamondTrap.
+/// @param newName The name to assign to the DiamondTrap.
 DiamondTrap::DiamondTrap(std::string const& newName) :
 	ClapTrap(newName + "_clap_name"),
-	FragTrap(), //why not use parameter?
-	ScavTrap(), //why not use parameter?
 	name(newName)
 {
-	this->hitPoints = FragTrap::hitPoints;
-	this->energyPoints = ScavTrap::energyPoints;
-	this->attackDamage = FragTrap::attackDamage;
+	this->hitPoints = FragTrap::defaultHitPoints;
+	this->energyPoints = ScavTrap::defaultEnergyPoints;
+	this->attackDamage = FragTrap::defaultAttackDamage;
 	std::cout << "DiamondTrap parameterized constructor called for " << this->name << std::endl;
 }
 
+/// @brief Copy constructor for DiamondTrap.
+/// @param src The DiamondTrap to copy from.
 DiamondTrap::DiamondTrap(DiamondTrap const& src) :
 	ClapTrap(src),
 	FragTrap(src),
@@ -48,32 +51,38 @@ DiamondTrap::DiamondTrap(DiamondTrap const& src) :
 	std::cout << "DiamondTrap copy constructor called" << std::endl;
 }
 
+
+/// @brief Copy assignment operator for DiamondTrap.
+/// @param rhs The DiamondTrap to assign from.
+/// @return Reference to the updated object.
 DiamondTrap&	DiamondTrap::operator=(DiamondTrap const&rhs)
 {
 	if (this != &rhs)
 	{
 		FragTrap::operator=(rhs);
-		ScavTrap::operator=(rhs);
-		name = rhs.name;
+		this->name = rhs.name;
 	}
+	std::cout << "DiamondTrap copy constructor called" << std::endl;
+	return (*this);
 }
 
+/// @brief Destructor for DiamondTrap.
 DiamondTrap::~DiamondTrap(void)
 {
 	std::cout << "DiamondTrap destructor called for " << this->name << std::endl;
 }
 
-// void	whoAmI(void);
+/// @brief Displays both the DiamondTrap and ClapTrap names.
+void	DiamondTrap::whoAmI(void)
+{
+	std::cout << "\n**Who am I?**\n";
+	std::cout << "*DiamondTrap name: " << this->name << "\n";
+	std::cout << "*ClapTrap name: " << ClapTrap::getName() << "\n" << std::endl;
+}
 
-// // whoAmI() prints DiamondTrap's own name and ClapTrap's name
-// void	DiamondTrap::whoAmI(void)
-// {
-// 	std::cout << "DiamondTrap name: " << this->name << "\n";
-// 	std::cout << "ClapTrap name: " << ClapTrap::name << "\n";
-// }
-
-// // Use ScavTrap's attack method explicitly to resolve ambiguity
-// void DiamondTrap::attack(const std::string& target)
-// {
-// 	ScavTrap::attack(target);
-// }
+/// @brief Performs an attack using ScavTrap's implementation.
+/// @param target The target to attack.
+void	DiamondTrap::attack(std::string const& target)
+{
+	ScavTrap::attack(target);
+}
