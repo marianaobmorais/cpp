@@ -6,38 +6,43 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/17 19:36:17 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/19 12:01:27 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/19 20:17:33 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
+unsigned int const	ScavTrap::defaultHitPoints = 100;
+unsigned int const	ScavTrap::defaultEnergyPoints = 50;
+unsigned int const	ScavTrap::defaultAttackDamage = 20;
+
 /// @brief Default constructor for ScavTrap.
-/// Initializes a ScavTrap with default name and predefined hit/energy/attack values.
+/// Initializes name with default and sets hitPoints, energyPoints, and attackDamage
+/// to their static default constant values.
 ScavTrap::ScavTrap(void) : ClapTrap("Default ScavTrap")
 {
-	this->hitPoints = 100;
-	this->energyPoints = 50;
-	this->attackDamage = 20;
+	this->hitPoints = ScavTrap::defaultHitPoints;
+	this->energyPoints = ScavTrap::defaultEnergyPoints;
+	this->attackDamage = ScavTrap::defaultAttackDamage;
 	std::cout << "ScavTrap default constructor called for " << this->name << std::endl;
 }
 
 /// @brief Parameterized constructor for ScavTrap.
 /// @param newName The name to assign to the ScavTrap.
+/// Sets hitPoints, energyPoints, and attackDamage to their static default constants.
 ScavTrap::ScavTrap(std::string const& newName) : ClapTrap(newName)
 {
-	this->hitPoints = 100;
-	this->energyPoints = 50;
-	this->attackDamage = 20;
+	this->hitPoints = ScavTrap::defaultHitPoints;
+	this->energyPoints = defaultEnergyPoints;
+	this->attackDamage = ScavTrap::defaultAttackDamage;
 	std::cout << "ScavTrap parameterized constructor called for " << this->name << std::endl;
 }
 
 /// @brief Copy constructor for ScavTrap.
 /// @param src The ScavTrap to copy from.
-ScavTrap::ScavTrap(ScavTrap const& src)
+ScavTrap::ScavTrap(ScavTrap const& src) : ClapTrap(src)
 {
 	std::cout << "ScavTrap copy constructor called" << std::endl;
-	*this = src;
 }
 
 /// @brief Copy assignment operator.
