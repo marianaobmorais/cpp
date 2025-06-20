@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 18:20:58 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/20 18:26:07 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/20 23:15:22 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,11 @@ class Dog : public Animal
 {
 	public:
 		Dog(void);
-		Dog(std::string &str);
 		Dog(Dog const& src);
 		Dog&	operator=(Dog const& rhs);
 		~Dog(void);
+
+		void	makeSound(void);
 };
 
 #endif //DOG_HPP
