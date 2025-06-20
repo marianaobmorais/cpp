@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 10:07:23 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/19 10:20:49 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/20 18:15:09 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ ClapTrap::ClapTrap(std::string newName) :
 
 /// @brief Copy constructor.
 /// @param src ClapTrap to copy from.
-ClapTrap::ClapTrap(const ClapTrap& src)
+ClapTrap::ClapTrap(ClapTrap const& src)
 {
 	std::cout << "ClapTrap copy constructor called" << std::endl;
 	*this = src;
@@ -44,7 +44,7 @@ ClapTrap::ClapTrap(const ClapTrap& src)
 /// @brief Copy assignment operator.
 /// @param rhs ClapTrap to assign from.
 /// @return Reference to the assigned ClapTrap.
-ClapTrap&	ClapTrap::operator=(const ClapTrap& rhs)
+ClapTrap&	ClapTrap::operator=(ClapTrap const& rhs)
 {
 	std::cout << "ClapTrap copy assignment operator called" << std::endl;
 	if (this != &rhs)
@@ -65,7 +65,7 @@ ClapTrap::~ClapTrap(void)
 
 /// @brief Performs an attack on a target if conditions allow.
 /// @param target The target to attack.
-void	ClapTrap::attack(const std::string& target)
+void	ClapTrap::attack(std::string const& target)
 {
 	if (this->energyPoints <= 0 && this->hitPoints <= 0)
 		std::cout << "ClapTrap " << this->name << " cannot attack. Not enough energy points nor hit points." << std::endl;
