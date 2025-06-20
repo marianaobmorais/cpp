@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 20:55:17 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/20 23:21:03 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/20 23:25:01 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Animal::Animal(Animal const& src)
 
 Animal&	Animal::operator=(Animal const& rhs)
 {
-	std::cout << "Animal assignment operator called" << std::endl;
+	std::cout << "Animal copy assignment operator called" << std::endl;
 	if (this != &rhs)
 		this->type = rhs.type;
 	return (*this);
