@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 18:07:19 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/20 18:23:20 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/20 22:29:03 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ class Animal
 		Animal&	operator=(Animal const& rhs);
 		~Animal(void);
 
-		void	makeSound(void);
+		void		makeSound(void);
+		std::string	getType(void) const;
 };
 
 #endif //ANIMAL_HPP
