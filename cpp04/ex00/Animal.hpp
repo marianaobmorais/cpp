@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 18:07:19 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/20 18:11:21 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/20 18:19:02 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,14 @@
 class Animal
 {
 	protected:
-		std::string	string;
+		std::string	type;
 	public:
 		Animal(void);
 		Animal(Animal const& src);
-		Animal&	operator=(Animal )
-}
+		Animal&	operator=(Animal const& rhs);
+		~Animal(void);
+
+		void	makeSound(void);
+};
 
 #endif
