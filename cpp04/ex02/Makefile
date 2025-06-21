@@ -6,14 +6,14 @@
 #    By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/20 14:14:23 by mariaoli          #+#    #+#              #
-#    Updated: 2025/06/21 16:12:59 by mariaoli         ###   ########.fr        #
+#    Updated: 2025/06/21 20:20:02 by mariaoli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = brain
+NAME = abstract
 
 SCRS = main.cpp \
-		Animal.cpp \
+		AAnimal.cpp \
 		Dog.cpp \
 		Cat.cpp \
 		WrongAnimal.cpp \

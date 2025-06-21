@@ -6,11 +6,11 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 21:01:51 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/21 20:10:11 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/21 20:20:33 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 // #include "WrongAnimal.hpp"
@@ -19,11 +19,11 @@
 int	main(void)
 {
 	// std::cout << "\n----Wrong test----" << std::endl;
-	// Animal a;
+	// AAnimal a;
 
 	std::cout << "\n----Basic test----" << std::endl;
-	Animal const* d = new Dog();
-	Animal const* c = new Cat();
+	AAnimal const* d = new Dog();
+	AAnimal const* c = new Cat();
 
 	std::cout << "\n----Destruct heap allocated objects----" << std::endl;
 	delete(d);
@@ -31,7 +31,7 @@ int	main(void)
 
 	std::cout << "\n----Array test----" << std::endl;
 	int const	arraySize = 4;
-	Animal const* animal[arraySize];
+	AAnimal const* animal[arraySize];
 
 	for (int i = 0; i < arraySize; i++)
 	{
@@ -73,9 +73,9 @@ int	main(void)
 
 	std::cout << "\n----Busy mind test----" << std::endl;
 	Dog	milo;
-	for (int i = 0; i < 100; i++)
+	for (int i = 0; i < 10; i++)
 		milo.setIdea(i, "Squirrel!");
-	for(int i = 0; i < 100; i++)
+	for(int i = 0; i < 10; i++)
 		std::cout << "Milo's idea: " << milo.getIdea(i) << std::endl;
 
 	std::cout << "\n----Destruct stack-allocated objects----" << std::endl;

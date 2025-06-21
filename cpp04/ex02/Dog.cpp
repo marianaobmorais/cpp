@@ -6,14 +6,14 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 22:44:58 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/21 19:17:21 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/21 20:19:14 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
 /// @brief Default constructor for Dog. Initializes type and alloDoges new Brain.
-Dog::Dog(void) : Animal(), dogBrain(new Brain())
+Dog::Dog(void) : AAnimal(), dogBrain(new Brain())
 {
 	this->type = "Dog";
 	std::cout << "Dog default constructor called" << std::endl;
@@ -21,7 +21,7 @@ Dog::Dog(void) : Animal(), dogBrain(new Brain())
 
 /// @brief Copy constructor for Dog. Performs deep copy of Brain.
 /// @param src The Dog object to copy from.
-Dog::Dog(Dog const& src) : Animal(src)
+Dog::Dog(Dog const& src) : AAnimal(src)
 {
 	this->dogBrain = new Brain(*src.dogBrain); //deep copy
 	std::cout << "Dog copy constructor called" << std::endl;
@@ -34,7 +34,7 @@ Dog&	Dog::operator=(Dog const& rhs)
 {
 	if (this != &rhs)
 	{
-		Animal::operator=(rhs);
+		AAnimal::operator=(rhs);
 		if (this->dogBrain)
 			delete(dogBrain);
 		this->dogBrain = new Brain(*rhs.dogBrain); //deep copy
