@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 23:25:24 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/20 23:32:49 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/21 09:23:56 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ Cat::~Cat(void)
 	std::cout << "Cat destructor called" << std::endl;
 }
 
-void	Cat::makeSound(void)
+void	Cat::makeSound(void) const
 {
-	std::cout << "Cat says: meow meow" << std::endl;
+	std::cout << this->type << " says: meow meow" << std::endl;
 }
