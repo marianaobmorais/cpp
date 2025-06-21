@@ -6,7 +6,7 @@
 #    By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/20 14:14:23 by mariaoli          #+#    #+#              #
-#    Updated: 2025/06/21 09:21:14 by mariaoli         ###   ########.fr        #
+#    Updated: 2025/06/21 13:03:55 by mariaoli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SCRS = main.cpp \
 OBJS = $(SCRS:.cpp=.o)
 
 CXX = c++
-CXXFLAGS = -Wall -Werror -Wextra -std=c++98
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98 #-Wvirtual
 
 RM = rm -f
 
