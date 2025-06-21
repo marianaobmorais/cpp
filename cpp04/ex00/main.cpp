@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 21:01:51 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/21 09:42:09 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/21 12:32:02 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int	main(void)
 {
 	std::cout << "\n----Animal, Dog and Cat construct----" << std::endl;
 	Animal const*		meta = new Animal();
-	Animal const*		d = new Dog();
-	Animal const*		c = new Cat();
+	Animal const*		d = new Dog(); //Dog is an Animal during the compilation
+	Animal const*		c = new Cat(); //Cat is an Animal during the compilation
 
 	std::cout << "\n----Animal, Dog and Cat test----" << std::endl;
 	std::cout << "Animal is a: " << meta->getType() << " " << std::endl;
