@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 20:55:17 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/20 23:25:01 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/21 09:23:48 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,9 @@ Animal::~Animal(void)
 	std::cout << "Animal destructor called" << std::endl;
 }
 
-void	Animal::makeSound(void)
+void	Animal::makeSound(void) const
 {
-	std::cout << "Undefined sound: !#RRR%$#%@$Tw" << std::endl;
+	std::cout << this->type << " says: !#RRR%$#%@$Tw" << std::endl;
 }
 
 std::string	Animal::getType(void) const
