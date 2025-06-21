@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 20:55:17 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/21 19:12:32 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/21 20:10:26 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,12 @@ Animal::~Animal(void)
 	std::cout << "Animal destructor called" << std::endl;
 }
 
-/// @brief Prints the animal's sound.
-/// Default sound is a placeholder.
-void	Animal::makeSound(void) const
-{
-	std::cout << this->type << " says: !#RRR%$#%@$Tw" << std::endl;
-}
+// /// @brief Prints the animal's sound.
+// /// Default sound is a placeholder.
+// void	Animal::makeSound(void) const
+// {
+// 	std::cout << this->type << " says: !#RRR%$#%@$Tw" << std::endl;
+// }
 
 /// @brief Getter for the animal's type.
 /// @return The type of the animal as a string.

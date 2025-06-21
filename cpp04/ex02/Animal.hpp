@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 18:07:19 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/21 18:20:18 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/21 20:07:10 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ class Animal
 		Animal&	operator=(Animal const& rhs);
 		virtual ~Animal(void);
 
-		virtual void	makeSound(void) const;
+		virtual void	makeSound(void) const = 0; //pure virtual method
 		std::string	getType(void) const;
 
-		virtual void		setIdea(int index, std::string const& idea); //overrride
-		virtual std::string	getIdea(int index) const; //overrride
+		virtual void		setIdea(int index, std::string const& idea) = 0; //pure virtual method
+		virtual std::string	getIdea(int index) const = 0; //pure virtual method
 };
 
 #endif //ANIMAL_HPP

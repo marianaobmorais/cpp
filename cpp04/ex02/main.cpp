@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 21:01:51 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/21 18:57:10 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/21 20:10:11 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@
 
 int	main(void)
 {
+	// std::cout << "\n----Wrong test----" << std::endl;
+	// Animal a;
+
 	std::cout << "\n----Basic test----" << std::endl;
 	Animal const* d = new Dog();
 	Animal const* c = new Cat();
