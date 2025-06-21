@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 20:55:17 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/21 09:23:48 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/21 18:34:07 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,14 @@ void	Animal::makeSound(void) const
 std::string	Animal::getType(void) const
 {
 	return (this->type);
+}
+
+void	Animal::setIdea(int, std::string const&)
+{
+	std::cout << "setIdea: No brain, no idea!" << std::endl;
+}
+
+std::string	Animal::getIdea(int) const
+{
+	return ("getIdea: No brain, no idea!");
 }

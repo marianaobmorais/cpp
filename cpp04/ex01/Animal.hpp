@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 18:07:19 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/21 09:36:52 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/21 18:20:18 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ class Animal
 
 		virtual void	makeSound(void) const;
 		std::string	getType(void) const;
+
+		virtual void		setIdea(int index, std::string const& idea); //overrride
+		virtual std::string	getIdea(int index) const; //overrride
 };
 
 #endif //ANIMAL_HPP
