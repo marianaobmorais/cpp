@@ -6,7 +6,7 @@
 #    By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/20 14:14:23 by mariaoli          #+#    #+#              #
-#    Updated: 2025/06/20 17:58:55 by mariaoli         ###   ########.fr        #
+#    Updated: 2025/06/21 09:21:14 by mariaoli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,12 +15,14 @@ NAME = animal
 SCRS = main.cpp \
 		Animal.cpp \
 		Dog.cpp \
-		Cat.cpp
+		Cat.cpp \
+		WrongAnimal.cpp \
+		WrongCat.cpp
 
-OBJS = $(SCRS=.cpp:.o)
+OBJS = $(SCRS:.cpp=.o)
 
 CXX = c++
-CXXFLAGS = -Wall -Werror -Wextra -std=++98
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
 RM = rm -f
 
