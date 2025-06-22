@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 21:01:51 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/21 20:20:33 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/22 01:24:42 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,15 +68,15 @@ int	main(void)
 	std::cout << "***Original idea: " << grumpy.getIdea(0) << " -> " << grumpy.getBrainPtr() << std::endl;
 	std::cout << "***Copy idea: " << grumpyCopy.getIdea(0) << " -> " << grumpyCopy.getBrainPtr() << std::endl;
 	grumpyCopy.setIdea(0, "Hiss at people");
-	std::cout << "***Modified copy idea: " << grumpyCopy.getIdea(0) << std::endl;
-	std::cout << "***Original idea: " << grumpy.getIdea(0) << std::endl;
+	std::cout << "***Modified copy idea: " << grumpyCopy.getIdea(0) << grumpyCopy.getBrainPtr() << std::endl;
+	std::cout << "***Original idea: " << grumpy.getIdea(0) << " -> " << grumpy.getBrainPtr() << std::endl;
 
-	std::cout << "\n----Busy mind test----" << std::endl;
+	std::cout << "\n----A bit busy mind test----" << std::endl;
 	Dog	milo;
 	for (int i = 0; i < 10; i++)
 		milo.setIdea(i, "Squirrel!");
 	for(int i = 0; i < 10; i++)
-		std::cout << "Milo's idea: " << milo.getIdea(i) << std::endl;
+		std::cout << "Milo's idea " << i <<": " << milo.getIdea(i) << std::endl;
 
 	std::cout << "\n----Destruct stack-allocated objects----" << std::endl;
 
