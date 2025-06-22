@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 21:01:51 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/22 02:01:14 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/22 10:45:55 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,19 +44,21 @@ int	main(void)
 	WrongAnimal const*	wrongMeta = new WrongAnimal();
 	WrongAnimal const*	wrongC = new WrongCat();
 
-	std::cout << "\n----Wrong Animal and Wrong Cat test (aka object slicing)----" << std::endl;
+	std::cout << "\n----Wrong Animal and Wrong Cat test ----" << std::endl;
 	std::cout << "WrongAnimal is a: " << wrongMeta->getType() << std::endl;
 	std::cout << "WrongCat is a: " << wrongC->getType() << std::endl;
-	std::cout << "\nA Dog that is not alright:" << std::endl;
-	Animal const	a = Dog();
-	std::cout << std::endl;
 	wrongMeta->makeSound();
 	wrongC->makeSound();
-	a.makeSound();
 
 	std::cout << "\n----Wrong Animal and Wrong Cat destruct----" << std::endl;
 	delete(wrongMeta);
 	delete(wrongC);
+
+	std::cout << "\n----Object slicing----" << std::endl;
+	Animal const	a = Dog();
+	a.makeSound();
+
+	std::cout << "\n----Destruct stack-allocated objects----" << std::endl;
 
 	return (0);
 }
