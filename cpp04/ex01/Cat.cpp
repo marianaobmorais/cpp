@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 23:25:24 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/21 19:14:38 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/22 10:28:04 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,8 @@ Cat::Cat(void) : Animal(), catBrain(new Brain())
 
 /// @brief Copy constructor for Cat. Performs deep copy of Brain.
 /// @param src The Cat object to copy from.
-Cat::Cat(Cat const& src) : Animal(src)
+Cat::Cat(Cat const& src) : Animal(src), catBrain(new Brain(*src.catBrain))
 {
-	this->catBrain = new Brain(*src.catBrain); //deep copy
 	std::cout << "Cat copy constructor called" << std::endl;
 }
 

@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 20:55:17 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/21 19:20:57 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/22 10:32:39 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,9 @@ WrongAnimal::WrongAnimal(void) : type("WrongUndefined type")
 
 /// @brief Copy constructor.
 /// @param src The WrongAnimal object to copy from.
-WrongAnimal::WrongAnimal(WrongAnimal const& src)
+WrongAnimal::WrongAnimal(WrongAnimal const& src) : type(src.type)
 {
 	std::cout << "WrongAnimal copy constructor called" << std::endl;
-	*this = src;
 }
 
 /// @brief Copy assignment operator.

@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 20:55:17 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/21 19:12:32 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/22 10:22:57 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,9 @@ Animal::Animal(void) : type("Undefined type")
 
 /// @brief Copy constructor.
 /// @param src Reference to the Animal to copy from.
-Animal::Animal(Animal const& src)
+Animal::Animal(Animal const& src) : type(src.type)
 {
 	std::cout << "Animal copy constructor called" << std::endl;
-	*this = src;
 }
 
 /// @brief Copy assignment operator.

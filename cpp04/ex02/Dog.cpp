@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 22:44:58 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/21 20:19:14 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/06/22 10:32:03 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,8 @@ Dog::Dog(void) : AAnimal(), dogBrain(new Brain())
 
 /// @brief Copy constructor for Dog. Performs deep copy of Brain.
 /// @param src The Dog object to copy from.
-Dog::Dog(Dog const& src) : AAnimal(src)
+Dog::Dog(Dog const& src) : AAnimal(src), dogBrain(new Brain(*src.dogBrain))
 {
-	this->dogBrain = new Brain(*src.dogBrain); //deep copy
 	std::cout << "Dog copy constructor called" << std::endl;
 }
 
