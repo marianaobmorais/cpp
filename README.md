@@ -15,7 +15,7 @@ The objective of these modules is to give an introduction to Object-Oriented Pro
 |[C++01](https://github.com/marianaobmorais/cpp/tree/main/cpp01): Memory allocation, pointers to members, references and switch statements|
 |[C++02](https://github.com/marianaobmorais/cpp/tree/main/cpp02): Ad-hoc polymorphism, operator overloading, the Orthodox Canonical class form and Fixed-point|
 |[C++03](https://github.com/marianaobmorais/cpp/tree/main/cpp03): Inheritance|
-|C++04: Subtype Polymorphism, Abstract Classes, and Interfaces|
+|[C++04](https://github.com/marianaobmorais/cpp/tree/main/cpp04): Subtype Polymorphism, Abstract Classes, and Interfaces|
 |C++05: Repetition and exceptions|
 |C++06: C++ casts|
 |C++07: C++ templates|  
