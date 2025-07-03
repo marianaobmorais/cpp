@@ -1,5 +1,6 @@
 animal
 brain
 abstract
+interface
 *.o
 a.out
