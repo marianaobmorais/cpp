@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 19:12:34 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/04 10:36:53 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/04 10:54:18 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Ice::Ice(void)
 	std::cout << "Ice default constructor called" << std::endl;
 }
 
-Ice::Ice(Ice const& src) : AMateria(src) //I guess this is right?
+Ice::Ice(Ice const& src) : AMateria(src) //I guess this is right? // should I add this->name = "ice"; somewhere?
 {
 	std::cout << "Ice copy constructor called" << std::endl;
 }
