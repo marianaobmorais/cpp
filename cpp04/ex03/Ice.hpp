@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 12:25:24 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/03 15:50:04 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/04 10:01:33 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Ice : public AMateria
 		Ice&	operator=(Ice const& rhs);
 		~Ice(void);
 
-		AMateria*	clone() const; //override
+		AMateria*	clone(void) const; //override
 		void		use(ICharacter& target); //override
 };
 

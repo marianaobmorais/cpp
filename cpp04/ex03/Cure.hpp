@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 13:53:17 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/03 15:50:08 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/04 10:02:09 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Cure : public AMateria
 		Cure&	operator=(Cure const& rhs);
 		~Cure(void);
 
-		AMateria*	clone() const; //override
+		AMateria*	clone(void) const; //override
 		void		use(ICharacter& target);
 };
 

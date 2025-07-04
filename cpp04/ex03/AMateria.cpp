@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 18:43:52 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/03 19:08:35 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/04 10:24:23 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ AMateria::AMateria(void) : type("Undefined type")
 	std::cout << "AMateria default constructor called" << std::endl;
 }
 
-AMateria::AMateria(std::string const& newType) : type(newType)
+AMateria::AMateria(std::string const& newType) : type(newType) //what do I need this for?
 {
-	std::cout << "AMateria paremetized constructor called" << std::endl;
+	std::cout << "AMateria paremetized constructor called for" << newType << std::endl;
 }
 
 AMateria::AMateria(AMateria const& src) : type(src.type)
@@ -41,7 +41,7 @@ AMateria::~AMateria(void)
 	std::cout << "AMateria destructor called" << std::endl;
 }
 
-std::string const&	AMateria::getType() const
+std::string const&	AMateria::getType(void) const
 {
 	return (this->type);
 }
