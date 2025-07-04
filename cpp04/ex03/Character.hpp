@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 14:05:00 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/03 15:48:52 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/04 12:03:16 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,16 @@
 #include "ICharacter.hpp"
 #include <string>
 
+#define SLOTS 4
+
 class Character : public ICharacter
 {
 	private:
 		std::string	name;
-		AMateria	*inventory[4];
+		AMateria	*inventory[SLOTS];
 	public:
 		Character(void);
-		Character(std::string const& name);
+		Character(std::string const& newName);
 		Character(Character const& src);
 		Character&	operator=(Character const& rhs);
 		~Character(void);
