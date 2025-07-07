@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 10:43:28 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/07 14:17:48 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/07 14:49:25 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ Character::~Character(void)
 		delete (this->inventory[i]);
 		this->inventory[i] = NULL;
 	}
-	std::cout << "Character destructor called" << std::endl;
+	std::cout << "Character destructor called for " << this->getName() << std::endl;
 }
 
 std::string const&	Character::getName(void) const
@@ -76,11 +76,12 @@ void	Character::equip(AMateria* m)
 			{
 				this->inventory[i] = m;
 				std::cout << this->name << " equiped inventory slot " << i << " with " << m->getType() << std::endl;
-				break ;
+				return ;
 			}
 		}
+		std::cout << this->name << " could not equip: no available slots" << std::endl;
+
 	}
-	//write warning?
 }
 void	Character::unequip(int idx)
 {
