@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 14:05:00 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/04 12:03:16 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/07 12:08:31 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define CHARACTER_HPP
 
 #include "ICharacter.hpp"
+#include "AMateria.hpp"
 #include <string>
 
 #define SLOTS 4
