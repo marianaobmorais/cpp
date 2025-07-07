@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 19:17:15 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/07 12:46:40 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/07 14:57:41 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,6 @@ AMateria*	MateriaSource::createMateria(std::string const & type)
 			return (templates[i]->clone());
 		}
 	}
-	std::cout << "Materia of type " << type << "not found: cannot be created" << std::endl;
+	std::cout << "Materia of type " << type << " not found: cannot be created" << std::endl;
 	return (NULL);
 }

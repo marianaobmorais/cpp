@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 18:43:52 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/07 14:23:33 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/07 14:46:06 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ AMateria::AMateria(void) : type("Undefined type")
 
 AMateria::AMateria(std::string const& newType) : type(newType)
 {
-	std::cout << "AMateria paremetized constructor called for " << newType << std::endl;
+	std::cout << "AMateria parametized constructor called for " << newType << std::endl;
 }
 
 AMateria::AMateria(AMateria const& src) : type(src.type)
 {
-	std::cout << "AMateria copy constructor called" << std::endl;
+	std::cout << "AMateria copy constructor called for " << src.getType() << std::endl;
 }
 
 AMateria&	AMateria::operator=(AMateria const& rhs)
