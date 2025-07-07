@@ -6,14 +6,14 @@
 #    By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/18 16:23:56 by mariaoli          #+#    #+#              #
-#    Updated: 2025/05/05 14:09:43 by mariaoli         ###   ########.fr        #
+#    Updated: 2025/07/07 11:50:44 by mariaoli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = megaphone
 
-SCRS = megaphone.cpp
-OBJS = $(SCRS:.cpp=.o)
+SRCS = megaphone.cpp
+OBJS = $(SRCS:.cpp=.o)
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98

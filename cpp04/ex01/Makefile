@@ -6,13 +6,13 @@
 #    By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/20 14:14:23 by mariaoli          #+#    #+#              #
-#    Updated: 2025/06/21 16:12:59 by mariaoli         ###   ########.fr        #
+#    Updated: 2025/07/07 11:50:44 by mariaoli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = brain
 
-SCRS = main.cpp \
+SRCS = main.cpp \
 		Animal.cpp \
 		Dog.cpp \
 		Cat.cpp \
@@ -20,7 +20,7 @@ SCRS = main.cpp \
 		WrongCat.cpp \
 		Brain.cpp
 
-OBJS = $(SCRS:.cpp=.o)
+OBJS = $(SRCS:.cpp=.o)
 
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
