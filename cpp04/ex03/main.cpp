@@ -6,12 +6,11 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 14:24:10 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/03 14:26:30 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/07 14:19:10 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "MateriaSource.hpp"
-#include "IMateriaSource.hpp"
 #include "Character.hpp"
 #include "Cure.hpp"
 #include "Ice.hpp"
