@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 10:43:28 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/04 14:03:36 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/07 14:17:48 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Character::Character(void) : name("Undefined name")
 
 Character::Character(std::string const& newName) : name(newName)
 {
-	std::cout << "Character parameterized constructor called for" << name << std::endl;
+	std::cout << "Character parameterized constructor called for " << name << std::endl;
 }
 
 Character::Character(Character const& src) : name(src.name)
@@ -34,7 +34,7 @@ Character::Character(Character const& src) : name(src.name)
 	}
 	std::cout << "Character copy constructor called" << std::endl;
 }
-Character&	Character::operator=(Character const& rhs) //: name(rhs.name) //it doesnt work bc it's not a constructor?
+Character&	Character::operator=(Character const& rhs)
 {
 	if (this != &rhs)
 	{
@@ -75,7 +75,7 @@ void	Character::equip(AMateria* m)
 			if (!this->inventory[i])
 			{
 				this->inventory[i] = m;
-				std::cout << this->name << " equiped inventory with " << m->getType() << std::endl;
+				std::cout << this->name << " equiped inventory slot " << i << " with " << m->getType() << std::endl;
 				break ;
 			}
 		}
@@ -84,15 +84,21 @@ void	Character::equip(AMateria* m)
 }
 void	Character::unequip(int idx)
 {
-	if (idx >= 0 && idx >= 3)
+	if (idx >= 0 && idx >= 3 && inventory[idx])
 	{
-		if (inventory[idx])
-			inventory[idx] = NULL; //won't it leak??
+		if (AMateria::stash(inventory[idx]))
+		{
+			inventory[idx] = NULL;
+			std::cout << this->name << " unequiped inventory slot " << idx << "to the floor" << std::endl;
+		}
+		else
+			std::cout << "Cannot unequip slot " << idx << ": floor is full"<< std::endl;
 	}
 }
 void	Character::use(int idx, ICharacter& target)
 {
 	if (this->inventory[idx])
 		this->inventory[idx]->use(target);
-	//else: no spell available in slot <idx>?
+	else
+		std::cout << "No spell available in slot " << idx << std::endl;
 }
