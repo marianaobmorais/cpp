@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/22 11:02:30 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/04 10:02:26 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/07 12:20:55 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 # define IMATERIASOURCE_HPP
 
 #include <string>
-#include "AMateria.hpp"
+
+class AMateria; //forward declare
 
 class IMateriaSource
 {

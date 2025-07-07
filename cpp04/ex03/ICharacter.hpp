@@ -6,15 +6,16 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/22 10:59:31 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/04 10:02:20 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/07 12:21:00 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ICHARACTER_HPP
 # define ICHARACTER_HPP
 
-#include "AMateria.hpp"
 #include <string>
+
+class AMateria; //forward declare
 
 class ICharacter
 {
