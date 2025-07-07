@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 10:16:34 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/07 13:05:00 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/07 14:44:28 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ Cure::~Cure(void)
 
 AMateria*	Cure::clone(void) const
 {
+	std::cout << "cure is cloned" << std::endl;
 	return (new Cure(*this)); //deep copy
 }
 

@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 19:12:34 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/07 12:58:56 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/07 14:44:18 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ Ice::~Ice(void)
 
 AMateria*	Ice::clone(void) const
 {
+	std::cout << "ice is cloned" << std::endl;
 	return (new Ice(*this)); //deep copy
 }
 
