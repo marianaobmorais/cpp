@@ -6,20 +6,19 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 19:12:34 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/04 10:54:18 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/07 12:58:56 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
 #include <iostream>
 
-Ice::Ice(void)
+Ice::Ice(void) : AMateria("ice")
 {
-	this->type = "ice";
 	std::cout << "Ice default constructor called" << std::endl;
 }
 
-Ice::Ice(Ice const& src) : AMateria(src) //I guess this is right? // should I add this->name = "ice"; somewhere?
+Ice::Ice(Ice const& src) : AMateria(src)
 {
 	std::cout << "Ice copy constructor called" << std::endl;
 }
@@ -42,7 +41,7 @@ AMateria*	Ice::clone(void) const
 	return (new Ice(*this)); //deep copy
 }
 
-void	Ice::use(ICharacter& target) //probably need to count down the materia??
+void	Ice::use(ICharacter& target)
 {
 	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }

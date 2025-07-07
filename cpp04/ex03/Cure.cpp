@@ -6,16 +6,15 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 10:16:34 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/04 10:36:42 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/07 13:05:00 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
 #include <iostream>
 
-Cure::Cure(void)
+Cure::Cure(void) : AMateria("cure")
 {
-	this->type = "cure";
 	std::cout << "Cure default constructor called" << std::endl;
 }
 
@@ -42,7 +41,7 @@ AMateria*	Cure::clone(void) const
 	return (new Cure(*this)); //deep copy
 }
 
-void	Cure::use(ICharacter& target) //probably need to count down the materia??
+void	Cure::use(ICharacter& target)
 {
 	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 }
