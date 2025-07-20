@@ -6,105 +6,56 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 15:56:51 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/20 17:17:03 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/20 21:35:12 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int	main(void)
 {
-	std::cout << "------------------Valid bureaucrat-------------------" << std::endl;
+	std::cout << "-----------------Valid form-----------------"<< std::endl;
 	try
 	{
-		Bureaucrat	a("Arnold", 130);
-		std::cout << a;
-		std::cout << "After grade increment:\n";
-		a.increment();
-		std::cout << a;
-
-		std::cout << "After grade decrement:\n";
-		a.decrement();
-		std::cout << a;
-	}
-	catch(std::exception const& e)
-	{
-		std::cout << "Exception: " << e.what() << std::endl;
-	}
-
-	std::cout << "----------Invalid bureaucrat (grade too low)----------" << std::endl;
-	try
-	{
-		Bureaucrat	b("Bob", 151);
+		Form f("Some Form", 1, 1);
+		std::cout << f;
+		std::cout << "--Lower bureaucrat grade--"<< std::endl;
+		Bureaucrat b("Bob", 4);
 		std::cout << b;
+		b.signForm(f);
+		std::cout << f;
+		std::cout << "--Valid bureaucrat grade--"<< std::endl;
+		Bureaucrat b2("Beatrice", 1);
+		std::cout << b2;
+		b2.signForm(f);
+		std::cout << f;
+		std::cout << "--Invalid sign--"<< std::endl;
+		Bureaucrat b3("Bruno", 1);
+		std::cout << b3;
+		b3.signForm(f);
 	}
 	catch (std::exception const& e)
 	{
 		std::cout << "Exception: " << e.what() << std::endl;
 	}
 
-	std::cout << "----------Invalid bureaucrat (grade too high)----------" << std::endl;
+	std::cout << "-----------------Invalid form-----------------"<< std::endl;
+	std::cout << "--Too high grade to sign--"<< std::endl;
 	try
 	{
-		Bureaucrat c("Carl", 0);
-		std::cout << c;
-	}
-	catch(std::exception const& e)
-	{
-		std::cout << "Exception: " << e.what() << std::endl;
-	}
-
-	std::cout << "----------------Copy assignment tests-----------------" << std::endl;
-	std::cout << "--Bureaucrats have same name--" << std::endl;
-	try
-	{
-		Bureaucrat	d("Denis", 50);
-		Bureaucrat	e("Denis", 100);
-		std::cout << "-Before assignment:\n" << d << e;
-
-		d = e;
-		std::cout << "-After assignment:\n" << d << e;
-	}
-	catch (std::exception const& e)
-	{
-		std::cout << "Exception: " << e.what() <<std::endl;
-	}
-
-	std::cout << "--Bureaucrats have different names-- " << std::endl;
-	try
-	{
-		Bureaucrat	f("Frank", 120);
-		Bureaucrat	g("Gordon", 30);
-		std::cout << "-Before assignment:\n" << f << g;
-
-		f = g;
-		std::cout << "-After assignment:\n" << f << g;
+		Form f2("Invalid form", 0, 150);
+		std::cout << f2;
 	}
 	catch (std::exception const& e)
 	{
 		std::cout << "Exception: " << e.what() << std::endl;
 	}
-
-	std::cout << "------------------Increment overflow-------------------" << std::endl;
+	std::cout << "--Too low grade to execute--"<< std::endl;
 	try
 	{
-		Bureaucrat	h("Hannah", 1);
-		std::cout << "-Before increment:\n" << h;
-		h.increment();
-		std::cout << "After increment:\n" << h;
-	}
-	catch (std::exception const& e)
-	{
-		std::cout << "Exception: " << e.what() << std::endl;
-	}
-
-	std::cout << "------------------Decrement overflow-------------------" << std::endl;
-	try
-	{
-		Bureaucrat	i("Igor", 150);
-		std::cout << "-Before decrement:\n" << i;
-		i.decrement();
-		std::cout << "After decrement:\n" << i;
+		Form f3("Invalid form", 15, 151);
+		std::cout << f3;
 	}
 	catch (std::exception const& e)
 	{
