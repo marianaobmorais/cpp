@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 10:37:44 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/20 15:21:45 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/20 17:04:02 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,13 @@ class Bureaucrat
 		class GradeTooHighException : public std::exception
 		{
 			public:
-				virtual char const* what() const throw(); //C++98 exception specification, means it won’t throw anything
+				virtual char const* what() const throw(); //override
 		};
 
 		class GradeTooLowException : public std::exception
 		{
 			public:
-				virtual char const* what() const throw(); //C++98 exception specification, means it won’t throw anything
+				virtual char const* what() const throw(); //override
 		};
 };
 
