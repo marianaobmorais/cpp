@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 17:48:50 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/20 22:46:13 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/20 22:57:49 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ AForm&	AForm::operator=(AForm const& rhs)
 	if (this != &rhs)
 	{
 		if (this->name != rhs.name || this->gradeToSign != rhs.gradeToSign || this->gradeToExecute != rhs.gradeToExecute)
-			throw std::logic_error("Cannot reassign name, grade to sign nor grade to execute");
+			throw InvalidCopyAssignment();
 		this->status = rhs.status;
 	}
 	return (*this);
@@ -100,7 +100,14 @@ char const* AForm::GradeTooLowException::what() const throw()
 /// @return C-string description of the error.
 char const* AForm::FormIsAlreadySigned::what() const throw()
 {
-	return ("Form: already signed");
+	return ("AForm: already signed");
+}
+
+/// @brief Exception message for invalid copy assignment.
+/// @return A C-style string describing the exception.
+char const* AForm::InvalidCopyAssignment::what() const throw()
+{
+	return ("AForm: Invalid copy assignment");
 }
 
 /// @brief Allows a Bureaucrat to sign the form if their grade is sufficient.

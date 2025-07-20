@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 17:28:51 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/20 22:07:20 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/20 22:55:57 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,12 @@ class AForm
 		};
 
 		class FormIsAlreadySigned : public std::exception
+		{
+			public:
+				virtual char const* what() const throw(); //override
+		};
+
+		class InvalidCopyAssignment : public std::exception
 		{
 			public:
 				virtual char const* what() const throw(); //override
