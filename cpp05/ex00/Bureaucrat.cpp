@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 13:21:55 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/20 18:56:32 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/20 21:49:40 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,8 @@ char const* Bureaucrat::GradeTooLowException::what() const throw()
 	return ("Bureaucrat: grade is too low");
 }
 
+/// @brief Exception message for invalid copy assignment.
+/// @return A C-style string describing the exception.
 char const* Bureaucrat::InvalidCopyAssignment::what() const throw()
 {
 	return ("Bureaucrat: Invalid copy assignment");

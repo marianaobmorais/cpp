@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 13:21:55 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/20 21:21:56 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/20 21:49:24 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,10 @@ void	Bureaucrat::decrement(void)
 	this->grade += 1;
 }
 
+/// @brief Attempts to sign a form on behalf of the bureaucrat.
+/// If the bureaucrat's grade is high enough, the form is signed successfully.
+/// Otherwise, catches the exception and prints an appropriate error message.
+/// @param form The form the bureaucrat attempts to sign.
 void	Bureaucrat::signForm(Form& form)
 {
 	try
@@ -115,12 +119,14 @@ char const* Bureaucrat::GradeTooLowException::what() const throw()
 	return ("Bureaucrat: grade is too low");
 }
 
+/// @brief Exception message for invalid copy assignment.
+/// @return A C-style string describing the exception.
 char const* Bureaucrat::InvalidCopyAssignment::what() const throw()
 {
 	return ("Bureaucrat: Invalid copy assignment");
 }
 
-/// @brief Stream insertion operator for Bureaucrat.
+/// @brief Overloaded output operator for printing Bureaucrat information.
 /// @param out Output stream.
 /// @param bureaucrat Bureaucrat to print.
 /// @return Reference to the output stream.
