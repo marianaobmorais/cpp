@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 15:56:51 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/20 17:00:44 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/20 17:17:03 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int	main(void)
 		std::cout << "-Before assignment:\n" << f << g;
 
 		f = g;
-		std::cout << "-After assignment:\n" << f << g; //remove line?
+		std::cout << "-After assignment:\n" << f << g;
 	}
 	catch (std::exception const& e)
 	{
