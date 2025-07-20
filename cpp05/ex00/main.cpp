@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 15:56:51 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/20 17:17:03 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/20 21:11:36 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@ int	main(void)
 		std::cout << "After grade decrement:\n";
 		a.decrement();
 		std::cout << a;
+		std::cout << "--Copy constructor--" << std::endl;
+		Bureaucrat a2(a);
+		std::cout << a2;
 	}
 	catch(std::exception const& e)
 	{
