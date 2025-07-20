@@ -6,15 +6,23 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 13:21:55 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/20 16:22:18 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/20 17:24:23 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include <stdexcept>
 
+/// @brief Default constructor for Bureaucrat.
+/// Initializes name to "Default Name" and grade to 75.
 Bureaucrat::Bureaucrat(void) : name("Default Name"), grade(75) {}
 
+
+/// @brief Parameterized constructor for Bureaucrat.
+/// @param newName Name of the bureaucrat.
+/// @param newGrade Grade of the bureaucrat (must be between 1 and 150).
+/// @throws GradeTooHighException if newGrade < 1.
+/// @throws GradeTooLowException if newGrade > 150.
 Bureaucrat::Bureaucrat(std::string const& newName, int newGrade) : name(newName)
 {
 	if (newGrade < 1)
@@ -24,8 +32,16 @@ Bureaucrat::Bureaucrat(std::string const& newName, int newGrade) : name(newName)
 	this->grade = newGrade;
 }
 
+
+/// @brief Copy constructor for Bureaucrat.
+/// @param src The Bureaucrat to copy from.
 Bureaucrat::Bureaucrat(Bureaucrat const& src) : name(src.name), grade(src.grade) {}
 
+
+/// @brief Copy assignment operator.
+/// @param rhs The Bureaucrat to assign from.
+/// @return Reference to this Bureaucrat.
+/// @throws std::logic_error if trying to assign between bureaucrats with different names.
 Bureaucrat&	Bureaucrat::operator=(Bureaucrat const& rhs)
 {
 	if (this != &rhs)
@@ -37,18 +53,25 @@ Bureaucrat&	Bureaucrat::operator=(Bureaucrat const& rhs)
 	return (*this);
 }
 
+/// @brief Destructor for Bureaucrat.
 Bureaucrat::~Bureaucrat(void) {}
 
+/// @brief Gets the bureaucrat's name.
+/// @return A constant reference to the name.
 std::string const&	Bureaucrat::getName(void) const
 {
 	return (this->name);
 }
 
+/// @brief Gets the bureaucrat's grade.
+/// @return The grade as an integer.
 int	Bureaucrat::getGrade(void) const
 {
 	return (this->grade);
 }
 
+/// @brief Increments the bureaucrat's grade.
+/// @throws GradeTooHighException if grade would go above 1.
 void	Bureaucrat::increment(void)
 {
 	if (this->grade - 1 < 1)
@@ -56,6 +79,8 @@ void	Bureaucrat::increment(void)
 	this->grade -= 1;
 }
 
+/// @brief Decrements the bureaucrat's grade.
+/// @throws GradeTooLowException if grade would go below 150.
 void	Bureaucrat::decrement(void)
 {
 	if (this->grade + 1 > 150)
@@ -63,16 +88,24 @@ void	Bureaucrat::decrement(void)
 	this->grade += 1;
 }
 
+/// @brief Exception message for grade too high.
+/// @return C-string message indicating grade is too high.
 char const*	Bureaucrat::GradeTooHighException::what() const throw()
 {
 	return ("Grade is too high: must be >= 1");
 }
 
+/// @brief Exception message for grade too low.
+/// @return C-string message indicating grade is too low.
 char const* Bureaucrat::GradeTooLowException::what() const throw()
 {
 	return ("Grade is too low: must be <= 150");
 }
 
+/// @brief Stream insertion operator for Bureaucrat.
+/// @param out Output stream.
+/// @param bureaucrat Bureaucrat to print.
+/// @return Reference to the output stream.
 std::ostream& operator<<(std::ostream& out, Bureaucrat const& bureaucrat)
 {
 	out << bureaucrat.getName() << ", bureaucrat grade " << bureaucrat.getGrade() << "." << std::endl;
