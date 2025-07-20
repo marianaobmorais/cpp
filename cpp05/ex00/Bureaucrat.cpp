@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 13:21:55 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/20 17:24:23 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/20 18:56:32 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,12 @@ Bureaucrat::Bureaucrat(void) : name("Default Name"), grade(75) {}
 /// @param newGrade Grade of the bureaucrat (must be between 1 and 150).
 /// @throws GradeTooHighException if newGrade < 1.
 /// @throws GradeTooLowException if newGrade > 150.
-Bureaucrat::Bureaucrat(std::string const& newName, int newGrade) : name(newName)
+Bureaucrat::Bureaucrat(std::string const& newName, int newGrade) : name(newName), grade(newGrade)
 {
-	if (newGrade < 1)
+	if (grade < 1)
 		throw GradeTooHighException();
-	if (newGrade > 150)
+	if (grade > 150)
 		throw GradeTooLowException();
-	this->grade = newGrade;
 }
 
 
@@ -47,7 +46,7 @@ Bureaucrat&	Bureaucrat::operator=(Bureaucrat const& rhs)
 	if (this != &rhs)
 	{
 		if (this->name != rhs.name)
-			throw std::logic_error("Copy assignment of Bureaucrats with different names is not allowed");
+			throw InvalidCopyAssignment();
 		this->grade = rhs.grade;
 	}
 	return (*this);
@@ -92,14 +91,19 @@ void	Bureaucrat::decrement(void)
 /// @return C-string message indicating grade is too high.
 char const*	Bureaucrat::GradeTooHighException::what() const throw()
 {
-	return ("Grade is too high: must be >= 1");
+	return ("Bureaucrat: grade is too high");
 }
 
 /// @brief Exception message for grade too low.
 /// @return C-string message indicating grade is too low.
 char const* Bureaucrat::GradeTooLowException::what() const throw()
 {
-	return ("Grade is too low: must be <= 150");
+	return ("Bureaucrat: grade is too low");
+}
+
+char const* Bureaucrat::InvalidCopyAssignment::what() const throw()
+{
+	return ("Bureaucrat: Invalid copy assignment");
 }
 
 /// @brief Stream insertion operator for Bureaucrat.
