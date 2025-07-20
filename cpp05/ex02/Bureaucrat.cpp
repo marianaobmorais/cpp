@@ -6,12 +6,12 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 13:21:55 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/20 21:49:24 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/20 22:53:23 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 #include <stdexcept>
 
 /// @brief Default constructor for Bureaucrat.
@@ -92,7 +92,7 @@ void	Bureaucrat::decrement(void)
 /// If the bureaucrat's grade is high enough, the form is signed successfully.
 /// Otherwise, catches the exception and prints an appropriate error message.
 /// @param form The form the bureaucrat attempts to sign.
-void	Bureaucrat::signForm(Form& form)
+void	Bureaucrat::signForm(AForm& form)
 {
 	try
 	{
