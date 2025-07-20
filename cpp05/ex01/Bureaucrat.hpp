@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 10:37:44 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/20 17:04:02 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/20 18:57:22 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include <string>
 #include <iostream>
 #include <exception>
+
+class Form;
 
 class Bureaucrat
 {
@@ -34,6 +36,8 @@ class Bureaucrat
 		void				increment(void);
 		void				decrement(void);
 
+		void				signForm(Form& form) /* const? */;
+
 		class GradeTooHighException : public std::exception
 		{
 			public:
@@ -41,6 +45,12 @@ class Bureaucrat
 		};
 
 		class GradeTooLowException : public std::exception
+		{
+			public:
+				virtual char const* what() const throw(); //override
+		};
+
+		class InvalidCopyAssignment : public std::exception
 		{
 			public:
 				virtual char const* what() const throw(); //override
