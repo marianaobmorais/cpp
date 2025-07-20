@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 10:37:44 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/20 18:57:22 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/20 22:49:58 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ class Bureaucrat
 		void				increment(void);
 		void				decrement(void);
 
-		void				signForm(Form& form) /* const? */;
+		void				signForm(Form& form);
 
 		class GradeTooHighException : public std::exception
 		{
