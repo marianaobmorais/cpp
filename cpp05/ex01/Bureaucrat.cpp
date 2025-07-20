@@ -6,11 +6,12 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 13:21:55 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/20 17:24:23 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/20 21:21:56 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 #include <stdexcept>
 
 /// @brief Default constructor for Bureaucrat.
@@ -23,13 +24,12 @@ Bureaucrat::Bureaucrat(void) : name("Default Name"), grade(75) {}
 /// @param newGrade Grade of the bureaucrat (must be between 1 and 150).
 /// @throws GradeTooHighException if newGrade < 1.
 /// @throws GradeTooLowException if newGrade > 150.
-Bureaucrat::Bureaucrat(std::string const& newName, int newGrade) : name(newName)
+Bureaucrat::Bureaucrat(std::string const& newName, int newGrade) : name(newName), grade(newGrade)
 {
-	if (newGrade < 1)
+	if (this->grade < 1)
 		throw GradeTooHighException();
-	if (newGrade > 150)
+	if (this->grade > 150)
 		throw GradeTooLowException();
-	this->grade = newGrade;
 }
 
 
@@ -88,18 +88,36 @@ void	Bureaucrat::decrement(void)
 	this->grade += 1;
 }
 
+void	Bureaucrat::signForm(Form& form)
+{
+	try
+	{
+		form.beSigned(*this);
+		std::cout << this->name << " signed " << form.getName() << "." << std::endl;
+	}
+	catch (std::exception const& e)
+	{
+		std::cout << this->name << " couldn't sign " << form.getName() << " because: " << e.what() << "." << std::endl;
+	}
+}
+
 /// @brief Exception message for grade too high.
 /// @return C-string message indicating grade is too high.
 char const*	Bureaucrat::GradeTooHighException::what() const throw()
 {
-	return ("Grade is too high: must be >= 1");
+	return ("Bureaucrat: grade is too high");
 }
 
 /// @brief Exception message for grade too low.
 /// @return C-string message indicating grade is too low.
 char const* Bureaucrat::GradeTooLowException::what() const throw()
 {
-	return ("Grade is too low: must be <= 150");
+	return ("Bureaucrat: grade is too low");
+}
+
+char const* Bureaucrat::InvalidCopyAssignment::what() const throw()
+{
+	return ("Bureaucrat: Invalid copy assignment");
 }
 
 /// @brief Stream insertion operator for Bureaucrat.
