@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 10:37:44 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/20 17:04:02 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/20 18:54:41 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,12 @@ class Bureaucrat
 		};
 
 		class GradeTooLowException : public std::exception
+		{
+			public:
+				virtual char const* what() const throw(); //override
+		};
+
+		class InvalidCopyAssignment : public std::exception
 		{
 			public:
 				virtual char const* what() const throw(); //override
