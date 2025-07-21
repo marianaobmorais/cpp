@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 17:48:50 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/20 22:57:49 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/21 10:30:54 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ AForm&	AForm::operator=(AForm const& rhs)
 	if (this != &rhs)
 	{
 		if (this->name != rhs.name || this->gradeToSign != rhs.gradeToSign || this->gradeToExecute != rhs.gradeToExecute)
-			throw InvalidCopyAssignment();
+			throw InvalidCopyAssignmentException();
 		this->status = rhs.status;
 	}
 	return (*this);
@@ -82,6 +82,28 @@ int	AForm::getGradeToExecute(void) const
 	return (this->gradeToExecute);
 }
 
+/// @brief Allows a Bureaucrat to sign the form if their grade is sufficient.
+/// @param bureaucrat The Bureaucrat attempting to sign the form.
+/// @throws FormIsAlreadySigned if the form has already been signed.
+/// @throws GradeTooLowException if the bureaucrat’s grade is too low.
+void	AForm::beSigned(Bureaucrat const& bureaucrat)
+{
+	if (this->status)
+		throw FormIsAlreadySignedException();
+	if (this->gradeToSign < bureaucrat.getGrade())
+		throw GradeTooLowException();
+	this->status = true;
+}
+
+void	AForm::execute(Bureaucrat const& executor) const
+{
+	if (!this->status)
+		throw FormIsAlreadySignedException();
+	if (this->gradeToExecute < executor.getGrade())
+		throw GradeTooLowException();
+	this->executeAction();
+}
+
 /// @brief Exception message for grades that are too high.
 /// @return C-string description of the error.
 char const* AForm::GradeTooHighException::what() const throw()
@@ -98,34 +120,23 @@ char const* AForm::GradeTooLowException::what() const throw()
 
 /// @brief Exception message for trying to sign an already signed form.
 /// @return C-string description of the error.
-char const* AForm::FormIsAlreadySigned::what() const throw()
+char const* AForm::FormIsAlreadySignedException::what() const throw()
 {
 	return ("AForm: already signed");
 }
 
+/// @brief Exception message for trying to execute an form that wasn't signed.
+/// @return C-string description of the error.
+char const* AForm::FormNotSignedException::what() const throw()
+{
+	return ("AForm: not signed");
+}
+
 /// @brief Exception message for invalid copy assignment.
 /// @return A C-style string describing the exception.
-char const* AForm::InvalidCopyAssignment::what() const throw()
+char const* AForm::InvalidCopyAssignmentException::what() const throw()
 {
 	return ("AForm: Invalid copy assignment");
-}
-
-/// @brief Allows a Bureaucrat to sign the form if their grade is sufficient.
-/// @param bureaucrat The Bureaucrat attempting to sign the form.
-/// @throws FormIsAlreadySigned if the form has already been signed.
-/// @throws GradeTooLowException if the bureaucrat’s grade is too low.
-void	AForm::beSigned(Bureaucrat const& bureaucrat)
-{
-	if (this->status)
-		throw FormIsAlreadySigned();
-	if (this->gradeToSign < bureaucrat.getGrade())
-		throw GradeTooLowException();
-	this->status = true;
-}
-
-void	AForm::execute(Bureaucrat const& executor) const
-{
-	//to do
 }
 
 /// @brief Overloaded output operator for printing a form’s state.
