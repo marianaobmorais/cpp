@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 23:13:27 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/21 10:49:27 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/21 20:21:02 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,5 @@ PresidentialPardonForm::~PresidentialPardonForm(void) {}
 
 void	PresidentialPardonForm::executeAction(void) const //override
 {
-	std::cout << this->target << "has been pardoned by Zaphod Beeblebrox." << std::endl;
+	std::cout << this->target << " has been pardoned by Zaphod Beeblebrox." << std::endl;
 }
