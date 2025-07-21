@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 17:48:50 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/21 10:30:54 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/21 20:15:47 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,9 +98,10 @@ void	AForm::beSigned(Bureaucrat const& bureaucrat)
 void	AForm::execute(Bureaucrat const& executor) const
 {
 	if (!this->status)
-		throw FormIsAlreadySignedException();
+		throw FormNotSignedException();
 	if (this->gradeToExecute < executor.getGrade())
 		throw GradeTooLowException();
+	std::cout << executor.getName() << " executed " << this->name << "." << std::endl;
 	this->executeAction();
 }
 
@@ -108,35 +109,35 @@ void	AForm::execute(Bureaucrat const& executor) const
 /// @return C-string description of the error.
 char const* AForm::GradeTooHighException::what() const throw()
 {
-	return ("AForm: grade is too high");
+	return ("grade is too high");
 }
 
 /// @brief Exception message for grades that are too low.
 /// @return C-string description of the error.
 char const* AForm::GradeTooLowException::what() const throw()
 {
-	return ("AForm: grade is too low");
+	return ("grade is too low");
 }
 
 /// @brief Exception message for trying to sign an already signed form.
 /// @return C-string description of the error.
 char const* AForm::FormIsAlreadySignedException::what() const throw()
 {
-	return ("AForm: already signed");
+	return ("form is already signed");
 }
 
 /// @brief Exception message for trying to execute an form that wasn't signed.
 /// @return C-string description of the error.
 char const* AForm::FormNotSignedException::what() const throw()
 {
-	return ("AForm: not signed");
+	return ("form is not signed");
 }
 
 /// @brief Exception message for invalid copy assignment.
 /// @return A C-style string describing the exception.
 char const* AForm::InvalidCopyAssignmentException::what() const throw()
 {
-	return ("AForm: Invalid copy assignment");
+	return ("invalid copy assignment");
 }
 
 /// @brief Overloaded output operator for printing a form’s state.
