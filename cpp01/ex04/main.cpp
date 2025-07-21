@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/09 02:06:18 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/06/09 16:38:25 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/21 12:31:11 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	main(int argc, char **argv)
 	if (!checkFileStream(infile))
 		return (1);
 	std::string	newFilename = filename.append(".replace");
-	std::ofstream outfile(newFilename.c_str());
+	std::ofstream	outfile(newFilename.c_str());
 	if (!checkFileStream(outfile))
 		return (1);
 	replace(infile, outfile, s1, s2);
