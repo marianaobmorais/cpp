@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 23:01:47 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/20 23:06:41 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/21 10:34:16 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ class PresidentialPardonForm : public AForm
 {
 	private:
 		std::string	target;
+	protected:
+		void	executeAction(void) const; //override
 	public:
 		PresidentialPardonForm(void);
 		PresidentialPardonForm(std::string const& newTarget);
 		PresidentialPardonForm(PresidentialPardonForm const& src);
 		PresidentialPardonForm&	operator=(PresidentialPardonForm const& rhs);
 		~PresidentialPardonForm(void);
-
-		void	execute(Bureaucrat const & executor) const; //override
 };
 
 #endif //PRESIDENTIALPARDONFORM_HPP
