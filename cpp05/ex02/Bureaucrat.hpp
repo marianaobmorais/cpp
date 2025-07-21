@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 10:37:44 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/20 22:49:47 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/21 10:23:38 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ class Bureaucrat
 				virtual char const* what() const throw(); //override
 		};
 
-		class InvalidCopyAssignment : public std::exception
+		class InvalidCopyAssignmentException : public std::exception
 		{
 			public:
 				virtual char const* what() const throw(); //override

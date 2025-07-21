@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 13:21:55 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/20 22:53:23 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/21 10:24:13 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ Bureaucrat&	Bureaucrat::operator=(Bureaucrat const& rhs)
 	if (this != &rhs)
 	{
 		if (this->name != rhs.name)
-			throw std::logic_error("Copy assignment of Bureaucrats with different names is not allowed");
+			throw InvalidCopyAssignmentException();
 		this->grade = rhs.grade;
 	}
 	return (*this);
@@ -105,6 +105,12 @@ void	Bureaucrat::signForm(AForm& form)
 	}
 }
 
+void	Bureaucrat::executeForm(AForm const& form) const
+{
+	//to do
+}
+
+
 /// @brief Exception message for grade too high.
 /// @return C-string message indicating grade is too high.
 char const*	Bureaucrat::GradeTooHighException::what() const throw()
@@ -121,7 +127,7 @@ char const* Bureaucrat::GradeTooLowException::what() const throw()
 
 /// @brief Exception message for invalid copy assignment.
 /// @return A C-style string describing the exception.
-char const* Bureaucrat::InvalidCopyAssignment::what() const throw()
+char const* Bureaucrat::InvalidCopyAssignmentException::what() const throw()
 {
 	return ("Bureaucrat: Invalid copy assignment");
 }

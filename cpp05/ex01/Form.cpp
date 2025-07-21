@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 17:48:50 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/20 22:57:09 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/21 10:25:50 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ Form&	Form::operator=(Form const& rhs)
 	if (this != &rhs)
 	{
 		if (this->name != rhs.name || this->gradeToSign != rhs.gradeToSign || this->gradeToExecute != rhs.gradeToExecute)
-			throw InvalidCopyAssignment();
+			throw InvalidCopyAssignmentException();
 		this->status = rhs.status;
 	}
 	return (*this);
@@ -98,14 +98,14 @@ char const* Form::GradeTooLowException::what() const throw()
 
 /// @brief Exception message for trying to sign an already signed form.
 /// @return C-string description of the error.
-char const* Form::FormIsAlreadySigned::what() const throw()
+char const* Form::FormIsAlreadySignedException::what() const throw()
 {
 	return ("Form: already signed");
 }
 
 /// @brief Exception message for invalid copy assignment.
 /// @return A C-style string describing the exception.
-char const* Form::InvalidCopyAssignment::what() const throw()
+char const* Form::InvalidCopyAssignmentException::what() const throw()
 {
 	return ("Form: Invalid copy assignment");
 }
@@ -117,7 +117,7 @@ char const* Form::InvalidCopyAssignment::what() const throw()
 void	Form::beSigned(Bureaucrat const& bureaucrat)
 {
 	if (this->status)
-		throw FormIsAlreadySigned();
+		throw FormIsAlreadySignedException();
 	if (this->gradeToSign < bureaucrat.getGrade())
 		throw GradeTooLowException();
 	this->status = true;
