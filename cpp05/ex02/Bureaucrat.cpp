@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 13:21:55 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/21 10:24:13 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/21 20:22:18 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ Bureaucrat::Bureaucrat(std::string const& newName, int newGrade) : name(newName)
 	if (this->grade > 150)
 		throw GradeTooLowException();
 }
-
 
 /// @brief Copy constructor for Bureaucrat.
 /// @param src The Bureaucrat to copy from.
@@ -105,31 +104,41 @@ void	Bureaucrat::signForm(AForm& form)
 	}
 }
 
+/// @brief Attempts to execute a form on behalf of the bureaucrat.
+/// If the bureaucrat's grade is high enough, the form is executed successfully.
+/// Otherwise, catches the exception and prints an appropriate error message.
+/// @param form The form the bureaucrat attempts to execute.
 void	Bureaucrat::executeForm(AForm const& form) const
 {
-	//to do
+	try
+	{
+		form.execute(*this);
+	}
+	catch (std::exception const& e)
+	{
+		std::cout << this->name << " couldn't execute " << form.getName() << " because: " << e.what() << "." << std::endl;
+	}
 }
-
 
 /// @brief Exception message for grade too high.
 /// @return C-string message indicating grade is too high.
 char const*	Bureaucrat::GradeTooHighException::what() const throw()
 {
-	return ("Bureaucrat: grade is too high");
+	return ("grade is too high");
 }
 
 /// @brief Exception message for grade too low.
 /// @return C-string message indicating grade is too low.
 char const* Bureaucrat::GradeTooLowException::what() const throw()
 {
-	return ("Bureaucrat: grade is too low");
+	return ("grade is too low");
 }
 
 /// @brief Exception message for invalid copy assignment.
 /// @return A C-style string describing the exception.
 char const* Bureaucrat::InvalidCopyAssignmentException::what() const throw()
 {
-	return ("Bureaucrat: Invalid copy assignment");
+	return ("invalid copy assignment");
 }
 
 /// @brief Overloaded output operator for printing Bureaucrat information.
