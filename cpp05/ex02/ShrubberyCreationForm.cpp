@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 12:19:29 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/21 12:43:27 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/21 13:03:07 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,10 @@ ShrubberyCreationForm::~ShrubberyCreationForm(void) {}
 void	ShrubberyCreationForm::executeAction(void) const //override
 {
 	std::string	filename = this->target + "_shrubbery";
-	std::ofstream	outfile(filename.c_str()); //what is happening here?
-	if (!outfile.good()) //too many checks?
-		throw std::logic_error("Error creating outfile");
-	if (outfile.is_open())
-	{
-		outfile <<
+	std::ofstream	outfile(filename.c_str());
+	if (!outfile.is_open())
+		throw std::logic_error("Error opening outfile");
+	outfile <<
 		"    * \n" <<
 		"   /.\\ \n" <<
 		"  /o..\\ \n" <<
@@ -51,6 +49,5 @@ void	ShrubberyCreationForm::executeAction(void) const //override
 		" /...o.\\ \n" <<
 		"/..o....\\ \n" <<
 		"^^^[_]^^^ \n";
-		outfile.close();
-	}
+	outfile.close();
 }
