@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 13:21:55 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/21 10:24:38 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/21 20:16:47 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,21 +91,21 @@ void	Bureaucrat::decrement(void)
 /// @return C-string message indicating grade is too high.
 char const*	Bureaucrat::GradeTooHighException::what() const throw()
 {
-	return ("Bureaucrat: grade is too high");
+	return ("grade is too high");
 }
 
 /// @brief Exception message for grade too low.
 /// @return C-string message indicating grade is too low.
 char const* Bureaucrat::GradeTooLowException::what() const throw()
 {
-	return ("Bureaucrat: grade is too low");
+	return ("grade is too low");
 }
 
 /// @brief Exception message for invalid copy assignment.
 /// @return A C-style string describing the exception.
 char const* Bureaucrat::InvalidCopyAssignmentException::what() const throw()
 {
-	return ("Bureaucrat: Invalid copy assignment");
+	return ("invalid copy assignment");
 }
 
 /// @brief Stream insertion operator for Bureaucrat.

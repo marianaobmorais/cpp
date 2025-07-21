@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 17:48:50 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/21 10:25:50 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/21 20:16:12 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,28 +86,28 @@ int	Form::getGradeToExecute(void) const
 /// @return C-string description of the error.
 char const* Form::GradeTooHighException::what() const throw()
 {
-	return ("Form: grade is too high");
+	return ("grade is too high");
 }
 
 /// @brief Exception message for grades that are too low.
 /// @return C-string description of the error.
 char const* Form::GradeTooLowException::what() const throw()
 {
-	return ("Form: grade is too low");
+	return ("grade is too low");
 }
 
 /// @brief Exception message for trying to sign an already signed form.
 /// @return C-string description of the error.
 char const* Form::FormIsAlreadySignedException::what() const throw()
 {
-	return ("Form: already signed");
+	return ("form is already signed");
 }
 
 /// @brief Exception message for invalid copy assignment.
 /// @return A C-style string describing the exception.
 char const* Form::InvalidCopyAssignmentException::what() const throw()
 {
-	return ("Form: Invalid copy assignment");
+	return ("invalid copy assignment");
 }
 
 /// @brief Allows a Bureaucrat to sign the form if their grade is sufficient.
