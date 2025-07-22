@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 15:56:51 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/20 21:35:12 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/22 11:04:21 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,38 @@
 int	main(void)
 {
 	std::cout << "-----------------Valid form-----------------"<< std::endl;
+
+	Form f("Some Form", 1, 1);
+	std::cout << f;
+	std::cout << "--Lower bureaucrat grade--"<< std::endl;
 	try
 	{
-		Form f("Some Form", 1, 1);
-		std::cout << f;
-		std::cout << "--Lower bureaucrat grade--"<< std::endl;
 		Bureaucrat b("Bob", 4);
 		std::cout << b;
 		b.signForm(f);
 		std::cout << f;
-		std::cout << "--Valid bureaucrat grade--"<< std::endl;
+	}
+	catch (std::exception const& e)
+	{
+		std::cout << "Exception: " << e.what() << std::endl;
+	}
+	
+	std::cout << "--Valid bureaucrat grade--"<< std::endl;
+	try
+	{
 		Bureaucrat b2("Beatrice", 1);
 		std::cout << b2;
 		b2.signForm(f);
 		std::cout << f;
-		std::cout << "--Invalid sign--"<< std::endl;
+	}
+	catch (std::exception const& e)
+	{
+		std::cout << "Exception: " << e.what() << std::endl;
+	}
+	
+	std::cout << "--Sign already signed form--"<< std::endl;
+	try
+	{
 		Bureaucrat b3("Bruno", 1);
 		std::cout << b3;
 		b3.signForm(f);
@@ -40,8 +57,21 @@ int	main(void)
 		std::cout << "Exception: " << e.what() << std::endl;
 	}
 
-	std::cout << "-----------------Invalid form-----------------"<< std::endl;
-	std::cout << "--Too high grade to sign--"<< std::endl;
+	std::cout << "--Sign already signed form--"<< std::endl;
+	try
+	{
+		Form	f1("Tough form", 50, 50);
+		Bureaucrat	b4("Benny", 150);
+		b4.signForm(f1);
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << "Exception: " << e.what() << std::endl;
+	}
+	
+
+	std::cout << "-----------------Invalid form creation-----------------"<< std::endl;
+	std::cout << "--Too high form grade to sign--"<< std::endl;
 	try
 	{
 		Form f2("Invalid form", 0, 150);
@@ -51,7 +81,7 @@ int	main(void)
 	{
 		std::cout << "Exception: " << e.what() << std::endl;
 	}
-	std::cout << "--Too low grade to execute--"<< std::endl;
+	std::cout << "--Too low form grade to execute--"<< std::endl;
 	try
 	{
 		Form f3("Invalid form", 15, 151);
