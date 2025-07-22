@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 17:48:50 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/22 12:03:04 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/22 18:18:05 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,6 +150,8 @@ char const* AForm::InvalidCopyAssignmentException::what() const throw()
 /// @return The output stream.
 std::ostream&	operator<<(std::ostream& out, AForm const& form)
 {
-	out << form.getName() << ":\nSigned? " << (form.getStatus() ? "yes" : "no") << "\nMinimum grade to sign: " << form.getGradeToSign() << "\nMinimum grade to execute: " << form.getGradeToExecute() << std::endl;
+	std::cout << "\n[";
+	out << form.getName() << ":\nSigned? " << (form.getStatus() ? "yes" : "no") << "\nMinimum grade to sign: " << form.getGradeToSign() << "\nMinimum grade to execute: " << form.getGradeToExecute();
+	std::cout << "]\n" << std::endl;
 	return (out);
 }

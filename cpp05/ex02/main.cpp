@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 15:56:51 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/22 15:31:41 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/22 18:13:27 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	main(void)
 		std::cout << "Exception Bob error: " << e.what() << std::endl;
 	}
 
-	Bureaucrat	billy("Billy", 2);
+	Bureaucrat	billy("Billy", 5);
 	try
 	{
 		std::cout << billy;
