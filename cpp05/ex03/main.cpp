@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 15:56:51 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/22 18:20:24 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/22 20:46:00 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,6 @@ int	main(void)
 		
 		std::cout << billy;
 		billy.signForm(*ppf);
-		std::cout << *ppf;
 		billy.executeForm(*ppf);
 
 		delete ppf;
