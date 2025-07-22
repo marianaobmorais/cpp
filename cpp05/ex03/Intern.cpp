@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 11:59:14 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/22 13:44:06 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/22 20:45:07 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ AForm*	Intern::makeForm(std::string formName, std::string target)
 	{
 		if (name[i] == formName)
 		{
-			std::cout << "Intern creates " << formName << "." << std::endl;
+			std::cout << "Intern creates " << formName << " form." << std::endl;
 			return (createForm[i](target));
 		}
 	}
