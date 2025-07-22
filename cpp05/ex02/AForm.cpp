@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 17:48:50 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/21 20:15:47 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/22 12:02:45 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,10 @@ void	AForm::beSigned(Bureaucrat const& bureaucrat)
 	this->status = true;
 }
 
+/// @brief Executes the form if it is signed and the executor has a sufficient grade.
+/// @param executor The Bureaucrat attempting to execute the form.
+/// @throws FormNotSignedException if the form has not been signed.
+/// @throws GradeTooLowException if the Bureaucrat's grade is too low to execute the form.
 void	AForm::execute(Bureaucrat const& executor) const
 {
 	if (!this->status)
