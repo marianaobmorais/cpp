@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 15:56:51 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/22 11:23:56 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/22 14:36:58 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,71 +15,78 @@
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "AForm.hpp"
+#include "Intern.hpp"
 
 int	main(void)
 {
 	std::srand(std::time(NULL)); //randomize robotomy at runtime
 
 	Bureaucrat	bob("Bob", 25);
-	ShrubberyCreationForm	home("home");
-	std::cout << "-----------------Shrubbery Creation Form-----------------"<< std::endl;
+	Intern		someRandomIntern;
+	std::cout << "\n-----------------Shrubbery Creation Form-----------------"<< std::endl;
 	try
 	{
+		AForm		*scf;
+
+		std::cout << "Intern tries to create Shrubbery Creation Form" << std::endl;
+		scf = someRandomIntern.makeForm("invalid name", "home");
+		std::cout << *scf;
 		std::cout << bob;
-		std::cout << home;
-		bob.signForm(home);
-		std::cout << home;
-		bob.executeForm(home);
+		bob.signForm(*scf);
+		std::cout << *scf;
+		bob.executeForm(*scf);
+		
+		delete scf;
 	}
 	catch (std::exception const& e)
 	{
-		std::cout << "Exception Shrubbery Creation Form: " << e.what() << std::endl;
+		std::cout << "Exception: " << e.what() << std::endl;
 	}
-	std::cout << std::endl;
-
-	PresidentialPardonForm pardon("Arthur");
-	std::cout << "-----------------Presidential Pardon Form-----------------"<< std::endl;
+	
+	
+	std::cout << "\n-----------------Robotomy Request Form-----------------"<< std::endl;
 	try
 	{
-		std::cout << pardon;
-		bob.executeForm(pardon);
-		bob.signForm(pardon);
-		std::cout << pardon;
-		bob.executeForm(pardon);
+		AForm		*rrf;
+		
+		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+		std::cout << *rrf;
+		std::cout << bob;
+		bob.signForm(*rrf);
+		std::cout << *rrf;
+		bob.executeForm(*rrf);
+		
+		delete rrf;
+	}
+	catch (std::exception const& e)
+	{
+		std::cout << "Exception: " << e.what() << std::endl;
+	}
+	
+	std::cout << "\n-----------------Presidential Pardon Form-----------------"<< std::endl;
+	try
+	{
+		AForm		*ppf;
+
+		ppf = someRandomIntern.makeForm("presidential pardon", "Arthur");
+		std::cout << *ppf;
+		bob.executeForm(*ppf);
+		bob.signForm(*ppf);
+		std::cout << *ppf;
+		bob.executeForm(*ppf);
+		
+		Bureaucrat	billy("Billy", 2);
+		
+		std::cout << billy;
+		billy.signForm(*ppf);
+		std::cout << *ppf;
+		billy.executeForm(*ppf);
+
+		delete ppf;
 	}
 	catch (std::exception const& e)
 	{
 		std::cout << "Exception Bob error: " << e.what() << std::endl;
-	}
-
-	Bureaucrat	billy("Billy", 2);
-	try
-	{
-		std::cout << billy;
-		billy.signForm(pardon);
-		std::cout << pardon;
-		billy.executeForm(pardon);
-	}
-	catch (std::exception const& e)
-	{
-		std::cout << "Exception Billy error: " << e.what() << std::endl;
-	}
-	std::cout << std::endl;
-
-	std::cout << "-----------------Robotomy Request Form-----------------"<< std::endl;
-	try
-	{
-		AForm* formPtr = new RobotomyRequestForm("Marvin");
-		std::cout << *formPtr;
-		billy.signForm(*formPtr);
-		std::cout << *formPtr;
-		formPtr->execute(billy);
-		
-		delete formPtr;
-	}
-	catch (std::exception const& e)
-	{
-		std::cout << "Exception caught in main: " << e.what() << std::endl;
 	}
 
 	return (0);
