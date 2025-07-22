@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 15:56:51 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/20 21:11:36 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/22 14:35:11 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	main(void)
 {
-	std::cout << "------------------Valid bureaucrat-------------------" << std::endl;
+	std::cout << "\n------------------Valid bureaucrat-------------------" << std::endl;
 	try
 	{
 		Bureaucrat	a("Arnold", 130);
@@ -35,7 +35,7 @@ int	main(void)
 		std::cout << "Exception: " << e.what() << std::endl;
 	}
 
-	std::cout << "----------Invalid bureaucrat (grade too low)----------" << std::endl;
+	std::cout << "\n----------Invalid bureaucrat (grade too low)----------" << std::endl;
 	try
 	{
 		Bureaucrat	b("Bob", 151);
@@ -46,7 +46,7 @@ int	main(void)
 		std::cout << "Exception: " << e.what() << std::endl;
 	}
 
-	std::cout << "----------Invalid bureaucrat (grade too high)----------" << std::endl;
+	std::cout << "\n----------Invalid bureaucrat (grade too high)----------" << std::endl;
 	try
 	{
 		Bureaucrat c("Carl", 0);
@@ -57,7 +57,7 @@ int	main(void)
 		std::cout << "Exception: " << e.what() << std::endl;
 	}
 
-	std::cout << "----------------Copy assignment tests-----------------" << std::endl;
+	std::cout << "\n----------------Copy assignment tests-----------------" << std::endl;
 	std::cout << "--Bureaucrats have same name--" << std::endl;
 	try
 	{
