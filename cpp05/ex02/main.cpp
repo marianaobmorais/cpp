@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 15:56:51 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/22 11:23:56 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/22 14:36:12 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main(void)
 
 	Bureaucrat	bob("Bob", 25);
 	ShrubberyCreationForm	home("home");
-	std::cout << "-----------------Shrubbery Creation Form-----------------"<< std::endl;
+	std::cout << "\n-----------------Shrubbery Creation Form-----------------"<< std::endl;
 	try
 	{
 		std::cout << bob;
@@ -35,10 +35,9 @@ int	main(void)
 	{
 		std::cout << "Exception Shrubbery Creation Form: " << e.what() << std::endl;
 	}
-	std::cout << std::endl;
 
 	PresidentialPardonForm pardon("Arthur");
-	std::cout << "-----------------Presidential Pardon Form-----------------"<< std::endl;
+	std::cout << "\n-----------------Presidential Pardon Form-----------------"<< std::endl;
 	try
 	{
 		std::cout << pardon;
@@ -64,9 +63,8 @@ int	main(void)
 	{
 		std::cout << "Exception Billy error: " << e.what() << std::endl;
 	}
-	std::cout << std::endl;
 
-	std::cout << "-----------------Robotomy Request Form-----------------"<< std::endl;
+	std::cout << "\n-----------------Robotomy Request Form-----------------"<< std::endl;
 	try
 	{
 		AForm* formPtr = new RobotomyRequestForm("Marvin");
@@ -76,6 +74,20 @@ int	main(void)
 		formPtr->execute(billy);
 		
 		delete formPtr;
+	}
+	catch (std::exception const& e)
+	{
+		std::cout << "Exception caught in main: " << e.what() << std::endl;
+	}
+
+	std::cout << "\n--Another Robotomy Request Form--"<< std::endl;
+	RobotomyRequestForm	robotomy("Marvin");
+	try
+	{
+		std::cout << robotomy;
+		billy.signForm(robotomy);
+		std::cout << robotomy;
+		robotomy.execute(billy);
 	}
 	catch (std::exception const& e)
 	{
