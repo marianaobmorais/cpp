@@ -6,18 +6,19 @@
 #    By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/20 15:54:35 by mariaoli          #+#    #+#              #
-#    Updated: 2025/07/20 22:45:29 by mariaoli         ###   ########.fr        #
+#    Updated: 2025/07/22 11:56:30 by mariaoli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = form
+NAME = intern
 
 SRCS = main.cpp \
 		Bureaucrat.cpp \
 		AForm.cpp \
 		ShrubberyCreationForm.cpp \
 		RobotomyRequestForm.cpp \
-		PresidentialPardonForm.cpp
+		PresidentialPardonForm.cpp \
+		Intern.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
