@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 15:56:51 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/22 15:32:21 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/22 18:20:24 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int	main(void)
 	try
 	{
 		AForm		*rrf;
-		
+
 		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
 		std::cout << *rrf;
 		std::cout << bob;
@@ -77,7 +77,7 @@ int	main(void)
 		std::cout << *ppf;
 		bob.executeForm(*ppf);
 		
-		Bureaucrat	billy("Billy", 2);
+		Bureaucrat	billy("Billy", 5);
 		
 		std::cout << billy;
 		billy.signForm(*ppf);
