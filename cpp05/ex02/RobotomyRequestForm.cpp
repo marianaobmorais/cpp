@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 11:00:43 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/21 12:15:58 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/22 09:43:26 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,5 @@ RobotomyRequestForm::~RobotomyRequestForm(void) {}
 
 void	RobotomyRequestForm::executeAction(void) const
 {
-	std::cout << "* drilling noises *\n" << this->target << "has been successfully robotomized 50% of the time." << std::endl;
+	std::cout << "* drilling noises *\n" << this->target << " has been successfully robotomized 50% of the time." << std::endl;
 }
