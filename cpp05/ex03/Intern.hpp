@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 10:41:17 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/22 10:45:02 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/22 13:37:23 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define INTERN_HPP
 
 #include <string>
+#include <exception>
 
 class AForm;
 
@@ -26,6 +27,12 @@ class Intern
 		~Intern(void);
 
 		AForm*	makeForm(std::string formName, std::string target);
+
+		class FormNameUnknown : public std::exception
+		{
+			public:
+				virtual char const* what() const throw(); //override
+		};
 };
 
 #endif //INTERN_HPP
