@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 17:28:51 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/21 10:30:31 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/23 23:33:29 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ class AForm
 
 		void				beSigned(Bureaucrat const& bureaucrat);
 		virtual void		execute(Bureaucrat const& executor) const;
-		virtual void		executeAction(void) const = 0;
+		virtual void		executeAction(void) const = 0; //pure virtual
 
 		class GradeTooHighException : public std::exception
 		{
