@@ -6,12 +6,11 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 13:21:55 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/21 20:16:47 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/23 11:13:18 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include <stdexcept>
 
 /// @brief Default constructor for Bureaucrat.
 /// Initializes name to "Default Name" and grade to 75.

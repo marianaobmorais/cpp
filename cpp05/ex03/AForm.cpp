@@ -6,13 +6,12 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 17:48:50 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/22 18:18:05 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/23 11:13:44 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AForm.hpp"
 #include "Bureaucrat.hpp"
-#include <stdexcept>
 
 /// @brief Default constructor. Initializes a default form with max grades.
 AForm::AForm(void) : name("Default form"), status(false), gradeToSign(150), gradeToExecute(150) {}
