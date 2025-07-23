@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 15:56:51 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/22 14:35:27 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/23 23:33:04 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int	main(void)
 		std::cout << "Exception: " << e.what() << std::endl;
 	}
 
-	std::cout << "--Sign already signed form--"<< std::endl;
+	std::cout << "--Sign a higher grade form--"<< std::endl;
 	try
 	{
 		Form	f1("Tough form", 50, 50);
