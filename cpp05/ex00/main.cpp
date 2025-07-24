@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 15:56:51 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/22 14:35:11 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/24 17:29:36 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	main(void)
 		Bureaucrat a2(a);
 		std::cout << a2;
 	}
-	catch(std::exception const& e)
+	catch (std::exception const& e)
 	{
 		std::cout << "Exception: " << e.what() << std::endl;
 	}
@@ -52,7 +52,7 @@ int	main(void)
 		Bureaucrat c("Carl", 0);
 		std::cout << c;
 	}
-	catch(std::exception const& e)
+	catch (std::exception const& e)
 	{
 		std::cout << "Exception: " << e.what() << std::endl;
 	}

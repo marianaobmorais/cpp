@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 17:48:50 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/23 11:13:33 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/24 17:34:00 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,28 +83,28 @@ int	Form::getGradeToExecute(void) const
 
 /// @brief Exception message for grades that are too high.
 /// @return C-string description of the error.
-char const* Form::GradeTooHighException::what() const throw()
+char const*	Form::GradeTooHighException::what() const throw()
 {
 	return ("grade is too high");
 }
 
 /// @brief Exception message for grades that are too low.
 /// @return C-string description of the error.
-char const* Form::GradeTooLowException::what() const throw()
+char const*	Form::GradeTooLowException::what() const throw()
 {
 	return ("grade is too low");
 }
 
 /// @brief Exception message for trying to sign an already signed form.
 /// @return C-string description of the error.
-char const* Form::FormIsAlreadySignedException::what() const throw()
+char const*	Form::FormIsAlreadySignedException::what() const throw()
 {
 	return ("form is already signed");
 }
 
 /// @brief Exception message for invalid copy assignment.
 /// @return A C-style string describing the exception.
-char const* Form::InvalidCopyAssignmentException::what() const throw()
+char const*	Form::InvalidCopyAssignmentException::what() const throw()
 {
 	return ("invalid copy assignment");
 }

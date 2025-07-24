@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 10:37:44 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/21 10:23:38 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/24 17:32:12 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,6 @@ class Bureaucrat
 		};
 };
 
-std::ostream& operator<<(std::ostream& out, Bureaucrat const& bureaucrat);
+std::ostream&	operator<<(std::ostream& out, Bureaucrat const& bureaucrat);
 
 #endif //BUREAUCRAT_HPP

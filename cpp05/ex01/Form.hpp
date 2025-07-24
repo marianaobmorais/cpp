@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 17:28:51 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/21 10:25:33 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/24 17:30:58 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class Form
 		Form(void);
 		Form(std::string const& newName, int const newGradeToSign, int const newGradeToExecute);
 		Form(Form const& src);
-		Form&	operator=(Form const& rhs);
+		Form&				operator=(Form const& rhs);
 		~Form(void);
 
 		std::string const&	getName(void) const;

@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 13:21:55 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/23 11:13:18 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/24 17:30:06 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 /// @brief Default constructor for Bureaucrat.
 /// Initializes name to "Default Name" and grade to 75.
 Bureaucrat::Bureaucrat(void) : name("Default Name"), grade(75) {}
-
 
 /// @brief Parameterized constructor for Bureaucrat.
 /// @param newName Name of the bureaucrat.
@@ -34,7 +33,6 @@ Bureaucrat::Bureaucrat(std::string const& newName, int newGrade) : name(newName)
 /// @brief Copy constructor for Bureaucrat.
 /// @param src The Bureaucrat to copy from.
 Bureaucrat::Bureaucrat(Bureaucrat const& src) : name(src.name), grade(src.grade) {}
-
 
 /// @brief Copy assignment operator.
 /// @param rhs The Bureaucrat to assign from.
@@ -95,14 +93,14 @@ char const*	Bureaucrat::GradeTooHighException::what() const throw()
 
 /// @brief Exception message for grade too low.
 /// @return C-string message indicating grade is too low.
-char const* Bureaucrat::GradeTooLowException::what() const throw()
+char const*	Bureaucrat::GradeTooLowException::what() const throw()
 {
 	return ("grade is too low");
 }
 
 /// @brief Exception message for invalid copy assignment.
 /// @return A C-style string describing the exception.
-char const* Bureaucrat::InvalidCopyAssignmentException::what() const throw()
+char const*	Bureaucrat::InvalidCopyAssignmentException::what() const throw()
 {
 	return ("invalid copy assignment");
 }
@@ -111,7 +109,7 @@ char const* Bureaucrat::InvalidCopyAssignmentException::what() const throw()
 /// @param out Output stream.
 /// @param bureaucrat Bureaucrat to print.
 /// @return Reference to the output stream.
-std::ostream& operator<<(std::ostream& out, Bureaucrat const& bureaucrat)
+std::ostream&	operator<<(std::ostream& out, Bureaucrat const& bureaucrat)
 {
 	out << bureaucrat.getName() << ", bureaucrat grade " << bureaucrat.getGrade() << "." << std::endl;
 	return (out);

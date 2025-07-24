@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 13:21:55 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/23 11:13:28 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/24 17:34:04 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,7 +113,7 @@ char const*	Bureaucrat::GradeTooHighException::what() const throw()
 
 /// @brief Exception message for grade too low.
 /// @return C-string message indicating grade is too low.
-char const* Bureaucrat::GradeTooLowException::what() const throw()
+char const*	Bureaucrat::GradeTooLowException::what() const throw()
 {
 	return ("grade is too low");
 }
@@ -129,7 +129,7 @@ char const* Bureaucrat::InvalidCopyAssignmentException::what() const throw()
 /// @param out Output stream.
 /// @param bureaucrat Bureaucrat to print.
 /// @return Reference to the output stream.
-std::ostream& operator<<(std::ostream& out, Bureaucrat const& bureaucrat)
+std::ostream&	operator<<(std::ostream& out, Bureaucrat const& bureaucrat)
 {
 	out << bureaucrat.getName() << ", bureaucrat grade " << bureaucrat.getGrade() << "." << std::endl;
 	return (out);

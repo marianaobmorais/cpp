@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 15:56:51 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/23 23:33:04 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/24 17:28:01 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int	main(void)
 		Bureaucrat	b4("Benny", 150);
 		b4.signForm(f1);
 	}
-	catch(const std::exception& e)
+	catch (const std::exception& e)
 	{
 		std::cout << "Exception: " << e.what() << std::endl;
 	}
