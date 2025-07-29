@@ -6,16 +6,16 @@
 #    By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/29 12:59:54 by mariaoli          #+#    #+#              #
-#    Updated: 2025/07/29 13:03:52 by mariaoli         ###   ########.fr        #
+#    Updated: 2025/07/29 13:10:04 by mariaoli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = converter
 
-SCRS = main.cpp \
+SRCS = main.cpp \
 		ScalarConverter.cpp
 
-OBJS = $(SRCS=.cpp:.o)
+OBJS = $(SRCS:.cpp=.o)
 
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
