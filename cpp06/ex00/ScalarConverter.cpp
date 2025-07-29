@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 16:29:18 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/29 19:29:11 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/29 19:36:09 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,9 +63,9 @@ static bool	isDouble(std::string const& str)
 static void	convertFromChar(char c)
 {
 	if (std::isprint(c))
-		std::cout << "char: " << c << '\n';
+		std::cout << "char: '" << c << "'\n";
 	else
-		std::cout << "char: non-displayable\n";
+		std::cout << "char: Non displayable\n";
 	std::cout << "int: " << static_cast<int>(c) << '\n';
 	std::cout << std::fixed << std::setprecision(1);
 	std::cout << "float: " << static_cast<float>(c) << "f\n";
@@ -77,9 +77,9 @@ static void	convertFromInt(int n)
 	if (n >= 0 && n <= 127)
 	{
 		if (std::isprint(n))
-			std::cout << "char: " << static_cast<char>(n) << '\n';
+			std::cout << "char: '" << static_cast<char>(n) << "'\n";
 		else
-			std::cout << "char: non-displayable\n";
+			std::cout << "char: Non displayable\n";
 	}
 	else
 		std::cout << "char: impossible" << '\n';
@@ -89,16 +89,16 @@ static void	convertFromInt(int n)
 	std::cout << "double: "<< static_cast<double>(n) << std::endl;
 }
 
-static void	convertFromFloat(double fd)
+static void	convertFromDecimal(double fd)
 {
 	int	tmp = static_cast<int>(fd);
 
 	if (tmp >= 0 && tmp <= 127)
 	{
 		if (std::isprint(tmp))
-			std::cout << "char: " << static_cast<char>(fd) << "\n";
+			std::cout << "char: '" << static_cast<char>(fd) << "'\n";
 		else
-			std::cout << "char: non-displayable\n";
+			std::cout << "char: Non displayable\n";
 	}
 	else
 		std::cout << "char: impossible\n";
@@ -125,13 +125,13 @@ void	ScalarConverter::convert(std::string const& str)
 		std::string	tmp = str;
 		tmp.erase(tmp.length() - 1); //remove trailing f
 		double		fd = std::strtod(tmp.c_str(), NULL);
-		convertFromFloat(fd);
+		convertFromDecimal(fd);
 	}
 	else if (isDouble(str))
 	{
-		std::string	tmp2 = str;
-		double		fd = std::strtod(tmp2.c_str(), NULL);
-		convertFromFloat(fd);
+		std::string	tmp = str;
+		double		fd = std::strtod(tmp.c_str(), NULL);
+		convertFromDecimal(fd);
 	}
 	else
 		std::cout << "Error: invalid input" << std::endl;
