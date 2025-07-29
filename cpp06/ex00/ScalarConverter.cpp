@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 16:29:18 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/29 12:55:11 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/07/29 13:25:18 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 static bool	isChar(std::string const& str)
 {
 	//edge cases?
-	if (str.length() == 1 && std::isprint(str[0]) && std::isalpha(str[0]))
+	if (str.length() == 1 && !std::isdigit(str[0]))
 		return (true);
 	return (false);
 }
@@ -80,9 +80,12 @@ static bool	isDouble(std::string const& str)
 
 static void	convertFromChar(char c)
 {
-	std::cout << "Char: " << c << '\n';
+	if (std::isprint(c))
+		std::cout << "Char: " << c << '\n';
+	else
+		std::cout << "Char: Non-displayable\n";
 	std::cout << "Int: " << static_cast<int>(c) << '\n';
-	std::cout << "Float: " << static_cast<float>(c) << 'f\n';
+	std::cout << "Float: " << static_cast<float>(c) << "f\n";
 	std::cout << "Double: "<< static_cast<double>(c) << std::endl;
 }
 
