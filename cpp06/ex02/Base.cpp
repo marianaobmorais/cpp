@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/01 12:41:31 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/08/02 00:17:48 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/08/02 00:26:01 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,23 +50,26 @@ void	identify(Base* p)
 	A*	a = dynamic_cast<A*>(p);
 	B*	b = dynamic_cast<B*>(p);
 	C*	c = dynamic_cast<C*>(p);
+
+	std::cout << "Actual type of the object pointed to by p: ";
 	if (a)
-		std::cout << "Actual type of the object pointed to by p: A" << std::endl;
+		std::cout << "A" << std::endl;
 	else if (b)
-		std::cout << "Actual type of the object pointed to by p: B" << std::endl;
+		std::cout << "B" << std::endl;
 	else if (c)
-		std::cout << "Actual type of the object pointed to by p: C" << std::endl;
+		std::cout << "C" << std::endl;
 	else
-		std::cout << "Actual type of the object pointed to by p: unkwon" << std::endl;
+		std::cout << "unkwon" << std::endl;
 
 }
 
 void	identify(Base& p)
 {
+	std::cout << "Actual type of the object referenced to by p: ";
 	try
 	{
 		(void)dynamic_cast<A&>(p);
-		std::cout << "Actual type of the object referenced to by p: A" << std::endl;
+		std::cout << "A" << std::endl;
 		return ;
 	}
 	catch(const std::exception& e) {}
@@ -74,7 +77,7 @@ void	identify(Base& p)
 	try
 	{
 		(void)dynamic_cast<B&>(p);
-		std::cout << "Actual type of the object referenced to by p: B" << std::endl;
+		std::cout << "B" << std::endl;
 		return ;
 	}
 	catch (std::exception const& e) {}
@@ -82,8 +85,10 @@ void	identify(Base& p)
 	try
 	{
 		(void)dynamic_cast<C&>(p);
-		std::cout << "Actual type of the object referenced to by p: C" << std::endl;
+		std::cout << "C" << std::endl;
 		return ;
 	}
 	catch (std::exception const& e) {}
+
+	std::cout << "unkwon" << std::endl;
 }
