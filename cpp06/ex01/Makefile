@@ -6,14 +6,15 @@
 #    By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/29 19:38:32 by mariaoli          #+#    #+#              #
-#    Updated: 2025/07/29 19:42:28 by mariaoli         ###   ########.fr        #
+#    Updated: 2025/07/31 16:51:07 by mariaoli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = serializer
 
 SRCS = main.cpp \
-		Serializer.cpp
+		Serializer.cpp \
+		Data.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
