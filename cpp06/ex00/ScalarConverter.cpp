@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 16:29:18 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/29 19:36:09 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/08/04 16:50:59 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@
 #include <cerrno>
 #include <cmath>
 
+/// @brief Checks if the given string represents a single non-digit character.
+/// @param str Input string to check.
+/// @return true if it's a single non-digit character, false otherwise.
 static bool	isChar(std::string const& str)
 {
 	if (str.length() == 1 && !std::isdigit(str[0]))
@@ -25,6 +28,9 @@ static bool	isChar(std::string const& str)
 	return (false);
 }
 
+/// @brief Checks if the given string can be converted to a valid int.
+/// @param str Input string to check.
+/// @return true if it represents a valid int within INT_MIN and INT_MAX.
 static bool	isInt(std::string const& str)
 {
 	char	*endPtr;
@@ -36,6 +42,9 @@ static bool	isInt(std::string const& str)
 	return (false);
 }
 
+/// @brief Checks if the string is a valid float (with 'f' suffix or special float literals).
+/// @param str Input string to check.
+/// @return true if it is a float representation, false otherwise.
 static bool	isFloat(std::string const& str)
 {
 	char	*endPtr;;
@@ -48,6 +57,9 @@ static bool	isFloat(std::string const& str)
 	return (false);
 }
 
+/// @brief Checks if the string is a valid double.
+/// @param str Input string to check.
+/// @return true if it is a double representation, false otherwise
 static bool	isDouble(std::string const& str)
 {
 	char*	endPtr;
@@ -60,6 +72,8 @@ static bool	isDouble(std::string const& str)
 	return (false);
 }
 
+/// @brief Converts a character to all scalar types and prints the result.
+/// @param c Character to convert.
 static void	convertFromChar(char c)
 {
 	if (std::isprint(c))
@@ -72,6 +86,8 @@ static void	convertFromChar(char c)
 	std::cout << "double: "<< static_cast<double>(c) << std::endl;
 }
 
+/// @brief Converts an integer to all scalar types and prints the result.
+/// @param n Integer to convert.
 static void	convertFromInt(int n)
 {
 	if (n >= 0 && n <= 127)
@@ -89,6 +105,8 @@ static void	convertFromInt(int n)
 	std::cout << "double: "<< static_cast<double>(n) << std::endl;
 }
 
+/// @brief Converts a floating-point number to all scalar types and prints the result.
+/// @param fd Double to convert.
 static void	convertFromDecimal(double fd)
 {
 	int	tmp = static_cast<int>(fd);
@@ -111,6 +129,8 @@ static void	convertFromDecimal(double fd)
 	std::cout << "double: " << fd << std::endl;
 }
 
+/// @brief Detects the scalar type represented by the string and prints its conversions.
+/// @param str String representing a scalar value.
 void	ScalarConverter::convert(std::string const& str)
 {
 	if (isChar(str))
@@ -123,7 +143,7 @@ void	ScalarConverter::convert(std::string const& str)
 	else if (isFloat(str))
 	{
 		std::string	tmp = str;
-		tmp.erase(tmp.length() - 1); //remove trailing f
+		tmp.erase(tmp.length() - 1);
 		double		fd = std::strtod(tmp.c_str(), NULL);
 		convertFromDecimal(fd);
 	}

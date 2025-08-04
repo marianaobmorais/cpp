@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/01 12:41:31 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/08/02 00:44:37 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/08/04 16:55:50 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,11 @@
 #include "B.hpp"
 #include "C.hpp"
 
+/// @brief Constructor for Base object.
 Base::~Base(void) {}
 
+/// @brief Randomly generates an instance of one of the classes A, B, or C, and returns it as a Base pointer.
+/// @return A pointer to a newly allocated instance of A, B, or C (as Base*).
 Base*	generate(void)
 {
 	int	n = std::rand() % 3;
@@ -40,6 +43,9 @@ Base*	generate(void)
 	return (NULL);
 }
 
+/// @brief Identifies the dynamic type of the object pointed to by a Base pointer
+/// using dynamic_cast.
+/// @param p Pointer to a Base object.
 void	identify(Base* p)
 {
 	std::cout << "Actual type of the object pointed to by p: ";
@@ -54,6 +60,10 @@ void	identify(Base* p)
 
 }
 
+/// @brief Identifies the dynamic type of the object referenced by a Base reference
+/// using dynamic_cast and exception handling.
+/// @param p Reference to a Base object.
+/// @note Outputs the actual type to std::cout.
 void	identify(Base& p)
 {
 	std::cout << "Actual type of the object referenced to by p: ";
