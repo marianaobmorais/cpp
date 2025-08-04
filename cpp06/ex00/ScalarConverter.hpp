@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 17:27:04 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/28 18:41:44 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/08/04 16:43:02 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 #include <string>
 
+// no public constructor because it is meant to work like a pure utility class
 class ScalarConverter
 {
 	private:
-		// no public constructor because it is meant to work like a pure utility class
 		ScalarConverter(void);
 		ScalarConverter(ScalarConverter const& src);
 		ScalarConverter&	operator=(ScalarConverter const& rhs);
