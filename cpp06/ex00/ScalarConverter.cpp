@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 16:29:18 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/08/04 16:50:59 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/08/04 20:14:03 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ static bool	isDouble(std::string const& str)
 
 	if (str == "nan" || str == "-inf" || str == "+inf" || str == "inf")
 		return (true);
-	strtod(str.c_str(), &endPtr);
+	std::strtod(str.c_str(), &endPtr);
 	if (*endPtr == '\0')
 		return (true);
 	return (false);

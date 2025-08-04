@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/31 16:28:42 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/08/01 12:18:47 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/08/04 20:13:39 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,9 @@ int	main(void)
 	std::cout << std::endl;
 	std::cout << "[Veredict]" << std::endl;
 	if (personPtr == personDeserialized)
-		std::cout << "Original poitner == Deserialized pointer" << std::endl;
+		std::cout << "Original pointer == Deserialized pointer" << std::endl;
 	else
-		std::cout << "Original poitner != Deserialized pointer" << std::endl;
+		std::cout << "Original pointer != Deserialized pointer" << std::endl;
 
 	return (0);
 }
