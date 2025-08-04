@@ -6,14 +6,14 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 19:42:40 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/07/29 19:59:37 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/08/04 16:44:47 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SERIALIZER_HPP
 # define SERIALIZER_HPP
 
-#include <cstdint>
+#include <stdint.h>
 
 struct Data;
 
