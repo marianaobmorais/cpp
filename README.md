@@ -17,7 +17,7 @@ The objective of these modules is to give an introduction to Object-Oriented Pro
 |[C++03](https://github.com/marianaobmorais/cpp/tree/main/cpp03): Inheritance|
 |[C++04](https://github.com/marianaobmorais/cpp/tree/main/cpp04): Subtype Polymorphism, Abstract Classes, and Interfaces|
 |[C++05](https://github.com/marianaobmorais/cpp/tree/main/cpp05): Repetition and exceptions|
-|C++06: C++ casts|
+|[C++06](https://github.com/marianaobmorais/cpp/tree/main/cpp06): C++ casts|
 |C++07: C++ templates|  
 |C++08: Templated containers, iterators, algorithms|
 |C++09: Standard Template Library (STL)|
