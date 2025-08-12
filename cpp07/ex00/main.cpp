@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/12 13:30:15 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/08/12 13:59:56 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/08/12 17:20:18 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,8 @@ int	main(void)
 	std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
 	std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
 
-	float e = 42.0;
-	float f = 42.0;
+	float e = 42.1;
+	float f = 42.1;
 
 	std::cout << "\n[FLOAT]" << std::endl;
 	std::cout << "e = " << e << ", f = " << f <<std::endl;
