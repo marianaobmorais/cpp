@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/12 14:05:25 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/08/12 18:40:47 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/08/12 18:42:00 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,5 @@ void	ftPrint(T const& info)
 {
 	std::cout << info;
 }
-
-// template<typename T>
-// void	ftChangeToA(T& info)
-// {
-// 	info = 'A';
-// 	std::cout << info;
-// }
 
 #endif //ITER_HPP
