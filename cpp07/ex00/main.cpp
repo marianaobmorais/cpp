@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/12 13:30:15 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/08/12 17:20:18 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/12/20 15:32:36 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	main(void)
 	int a = 2;
 	int b = 3;
 
-	std::cout << "\n[INT]" << std::endl;
+	std::cout << "[INT]" << std::endl;
 	std::cout << "a = " << a << ", b = " << b <<std::endl;
 
 	std::cout << "\n[SWAP TEST]" << std::endl;

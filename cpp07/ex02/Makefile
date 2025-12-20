@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/08/12 14:01:54 by mariaoli          #+#    #+#              #
-#    Updated: 2025/12/20 16:04:19 by mariaoli         ###   ########.fr        #
+#    Created: 2025/12/20 16:01:49 by mariaoli          #+#    #+#              #
+#    Updated: 2025/12/20 16:08:19 by mariaoli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = iter
+NAME = array
 
 SRCS = main.cpp
 
@@ -19,7 +19,7 @@ OBJS = $(SRCS:.cpp=.o)
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
-RM = rm -f
+RM = rm -r
 
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)

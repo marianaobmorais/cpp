@@ -6,7 +6,7 @@
 #    By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/07 17:48:31 by mariaoli          #+#    #+#              #
-#    Updated: 2025/12/20 15:21:28 by mariaoli         ###   ########.fr        #
+#    Updated: 2025/12/20 15:31:46 by mariaoli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = whatever
 
 SRCS = main.cpp
 
-OBJS = $(SRCS:cpp=.o)
+OBJS = $(SRCS:.cpp=.o)
 
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
