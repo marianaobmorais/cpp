@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/12 21:04:43 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/08/12 22:41:08 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/12/17 20:30:55 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Array
 		~Array();
 
 		T const&	operator[](unsigned int index) const;
-		T&	operator[](unsigned int index);
+		T&			operator[](unsigned int index);
 
 		unsigned int	size(void) const;
 };

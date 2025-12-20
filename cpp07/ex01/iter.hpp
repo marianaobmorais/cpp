@@ -6,7 +6,7 @@
 /*   By: mariaoli <mariaoli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/12 14:05:25 by mariaoli          #+#    #+#             */
-/*   Updated: 2025/08/12 18:42:00 by mariaoli         ###   ########.fr       */
+/*   Updated: 2025/12/17 20:47:37 by mariaoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,14 @@
 #include <string>
 
 template<typename T, typename F>
-void	iter(T* array, std::size_t length, F function)
+void	iter(T* array, std::size_t const length, F function)
+{
+	for (std::size_t i = 0; i < length; i++)
+		function(array[i]);
+}
+
+template<typename T, typename F>
+void	iter(T const* array, std::size_t const length, F function)
 {
 	for (std::size_t i = 0; i < length; i++)
 		function(array[i]);
