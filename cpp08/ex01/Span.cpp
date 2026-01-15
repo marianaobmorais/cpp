@@ -18,7 +18,7 @@ Span& Span::operator=(Span const& rhs)
 
 Span::~Span(void) {}
 
-void	Span::addNumber(unsigned int value)
+void	Span::addNumber(int value)
 {
 	if (this->_values.size() >= this->_capacity)
 		throw std::logic_error("Out of range");

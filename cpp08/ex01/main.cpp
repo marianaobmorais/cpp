@@ -70,7 +70,7 @@ int	main(void)
 		std::cout << "Error: " << e.what() << '\n';
 	}
 
-	std::srand(std::time(NULL));
+	std::srand(time(NULL));
 
 	try
 	{
